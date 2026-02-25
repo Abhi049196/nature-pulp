@@ -7,7 +7,7 @@ const sections = [
     {
         id: "introduction",
         title: "1. Introduction",
-        content: `Welcome to Nature Pulp ("we," "our," or "us"), a product of Farm to Pulp Private Limited. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website naturepulp.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
+        content: `Welcome to Nature Pulp ("we," "our," or "us"), a product of Farm to Pulp Private Limited. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.naturepulp.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
 
 We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices with regards to your personal information, please contact us at contact@naturepulp.com.`,
     },
@@ -172,8 +172,8 @@ export default function PrivacyPolicyClient() {
                                         key={section.id}
                                         href={`#${section.id}`}
                                         className={`block px-4 py-2 rounded-xl text-sm transition-all duration-200 ${activeSection === section.id
-                                                ? "bg-brand-dark-green/10 text-brand-dark-green font-medium"
-                                                : "text-brand-dark-neutral/50 hover:text-brand-dark-green hover:bg-brand-light-bg"
+                                            ? "bg-brand-dark-green/10 text-brand-dark-green font-medium"
+                                            : "text-brand-dark-neutral/50 hover:text-brand-dark-green hover:bg-brand-light-bg"
                                             }`}
                                     >
                                         {section.title}

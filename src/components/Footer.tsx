@@ -180,8 +180,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-white/40 text-xs">
-                        © 2025 Nature Pulp. All rights reserved. A product of Farm to Pulp
-                        Private Limited.
+                        © 2025 Nature Pulp. All rights reserved. A product of Farm to Pulp Private Limited.
                     </p>
                     <p className="text-white/30 text-xs">
                         Crafted with 🌱 for a sustainable future

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, Cpu, Users, Sprout } from "lucide-react";
 
 export default function Hero() {
     return (
@@ -10,9 +10,8 @@ export default function Hero() {
             {/* Background Gradient */}
             <div className="absolute inset-0 warm-gradient" />
 
-            {/* Animated Background Elements */}
+            {/* Animated Background Elements — subtle parallax eco shapes */}
             <div className="absolute inset-0 overflow-hidden">
-                {/* Floating Leaf shapes */}
                 <motion.div
                     animate={{ y: [-20, 20, -20], rotate: [0, 10, 0] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -72,7 +71,7 @@ export default function Hero() {
                         >
                             <Sparkles className="w-4 h-4 text-brand-accent-brown" />
                             <span className="text-sm font-medium text-brand-dark-green">
-                                Pioneering Sustainable Innovation
+                                Redefining Sustainability with Global Innovation
                             </span>
                         </motion.div>
 
@@ -82,18 +81,18 @@ export default function Hero() {
                             transition={{ duration: 0.7, delay: 0.1 }}
                             className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-brand-dark-green leading-[1.1] mb-6"
                         >
-                            Paper That{" "}
-                            <span className="text-gradient">Grows</span>{" "}
-                            the Future
+                            Nature Pulp:{" "}
+                            <span className="text-gradient">Paper That</span>{" "}
+                            Grows the Future
                         </motion.h1>
 
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                            className="text-lg sm:text-xl text-brand-dark-neutral/70 leading-relaxed mb-10 max-w-lg"
+                            className="text-lg sm:text-xl text-brand-dark-neutral/70 leading-relaxed mb-10 max-w-xl"
                         >
-                            Redefining sustainability with global innovation. We transform agricultural waste into premium pulp and paper products — building a circular economy from the ground up.
+                            At Nature Pulp, we&apos;re transforming the pulp and paper industry by turning agricultural waste into a force for good. Using sugarcane bagasse, wheat straw, imported agri-waste pulp, virgin pulp, recycled pulp, and responsibly sourced wood, we craft eco-friendly products that power a circular economy.
                         </motion.p>
 
                         <motion.div
@@ -104,6 +103,7 @@ export default function Hero() {
                         >
                             <Link
                                 href="/products"
+                                id="hero-cta-products"
                                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-dark-green text-white rounded-full font-semibold text-base hover:bg-brand-dark-green/90 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-dark-green/25 hover:-translate-y-1"
                             >
                                 Explore Our Products
@@ -111,7 +111,8 @@ export default function Hero() {
                             </Link>
                             <Link
                                 href="/about"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-brand-dark-green text-brand-dark-green rounded-full font-semibold text-base hover:bg-brand-dark-green/5 transition-all duration-300 hover:-translate-y-1"
+                                id="hero-cta-vision"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-brand-dark-green text-brand-dark-green rounded-full font-semibold text-base hover:bg-brand-dark-green hover:text-white transition-all duration-300 hover:-translate-y-1"
                             >
                                 Our Vision
                             </Link>
@@ -130,7 +131,7 @@ export default function Hero() {
                             <div className="absolute inset-8 rounded-full eco-gradient opacity-20 blur-2xl animate-pulse" />
                             <div className="absolute inset-8 rounded-full bg-gradient-to-br from-brand-dark-green/10 to-brand-soft-green/20 border border-brand-soft-green/30 backdrop-blur-sm" />
 
-                            {/* Floating Elements */}
+                            {/* Floating stat cards */}
                             <motion.div
                                 animate={{ y: [-10, 10, -10] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -138,11 +139,11 @@ export default function Hero() {
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-xl bg-brand-dark-green/10 flex items-center justify-center">
-                                        <span className="text-xl">🌿</span>
+                                        <Leaf className="w-5 h-5 text-brand-dark-green" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-brand-dark-neutral/60">Zero Waste</p>
-                                        <p className="text-sm font-bold text-brand-dark-green">100% Circular</p>
+                                        <p className="text-xs text-brand-dark-neutral/60">Sustainable</p>
+                                        <p className="text-sm font-bold text-brand-dark-green">Zero Waste</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -154,11 +155,11 @@ export default function Hero() {
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-xl bg-brand-accent-brown/10 flex items-center justify-center">
-                                        <span className="text-xl">🌾</span>
+                                        <Users className="w-5 h-5 text-brand-accent-brown" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-brand-dark-neutral/60">Agri-Waste</p>
-                                        <p className="text-sm font-bold text-brand-dark-green">Farm to Pulp</p>
+                                        <p className="text-xs text-brand-dark-neutral/60">Empowering</p>
+                                        <p className="text-sm font-bold text-brand-dark-green">100K+ Farmers</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -170,11 +171,11 @@ export default function Hero() {
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-xl bg-brand-soft-green/20 flex items-center justify-center">
-                                        <span className="text-xl">♻️</span>
+                                        <Cpu className="w-5 h-5 text-brand-dark-green" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-brand-dark-neutral/60">Sustainable</p>
-                                        <p className="text-sm font-bold text-brand-dark-green">Net Zero</p>
+                                        <p className="text-xs text-brand-dark-neutral/60">AI & IoT</p>
+                                        <p className="text-sm font-bold text-brand-dark-green">Tech-Driven</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -185,12 +186,7 @@ export default function Hero() {
                                     animate={{ rotate: [0, 360] }}
                                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                                 >
-                                    <svg className="w-32 h-32 text-brand-dark-green/20" viewBox="0 0 100 100">
-                                        <path
-                                            d="M50 5 C75 25, 95 50, 50 95 C5 50, 25 25, 50 5Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
+                                    <Sprout className="w-28 h-28 text-brand-dark-green/15" />
                                 </motion.div>
                             </div>
                         </div>
@@ -208,7 +204,7 @@ export default function Hero() {
                         Trusted by industries worldwide
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-                        {["Packaging", "Paper Mills", "FMCG", "Textiles", "Agriculture"].map(
+                        {["Food & Beverage", "E-commerce", "Publishing", "Electronics", "Paper Mills"].map(
                             (industry) => (
                                 <span
                                     key={industry}

@@ -7,7 +7,7 @@ const sections = [
     {
         id: "acceptance",
         title: "1. Acceptance of Terms",
-        content: `By accessing and using the Nature Pulp website (naturepulp.com), operated by Farm to Pulp Private Limited, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
+        content: `By accessing and using the Nature Pulp website (www.naturepulp.com), operated by Farm to Pulp Private Limited, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
 
 These Terms and Conditions apply to all visitors, users, and others who access or use the website. By accessing or using the website, you agree to be bound by these terms. If you disagree with any part of the terms, then you may not access the website.`,
     },
@@ -195,8 +195,8 @@ export default function TermsConditionsClient() {
                                         key={section.id}
                                         href={`#${section.id}`}
                                         className={`block px-4 py-2 rounded-xl text-sm transition-all duration-200 ${activeSection === section.id
-                                                ? "bg-brand-dark-green/10 text-brand-dark-green font-medium"
-                                                : "text-brand-dark-neutral/50 hover:text-brand-dark-green hover:bg-brand-light-bg"
+                                            ? "bg-brand-dark-green/10 text-brand-dark-green font-medium"
+                                            : "text-brand-dark-neutral/50 hover:text-brand-dark-green hover:bg-brand-light-bg"
                                             }`}
                                     >
                                         {section.title}

@@ -17,47 +17,47 @@ const glacial = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Nature Pulp | Eco-Friendly Pulp & Sustainable Paper Solutions",
+    default: "Nature Pulp | Sustainable Pulp & Eco-Friendly Paper Solutions",
     template: "%s | Nature Pulp",
   },
   description:
-    "Sustainable pulp and paper made from agricultural waste. Eco-friendly packaging, virgin pulp, recycled pulp & biodegradable paper solutions by Farm to Pulp Private Limited.",
+    "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
   keywords: [
-    "eco-friendly packaging",
-    "paper from agri waste",
-    "zero waste solutions",
-    "biodegradable paper manufacturers",
-    "sustainable pulp",
-    "recycled pulp India",
+    "eco friendly pulp",
+    "agricultural waste paper",
+    "sustainable packaging",
+    "biodegradable paper",
+    "pulp manufacturer India",
+    "sugarcane bagasse pulp",
+    "recycled pulp",
     "Nature Pulp",
-    "Farm to Pulp",
   ],
   authors: [{ name: "Farm to Pulp Private Limited" }],
   creator: "Nature Pulp",
   publisher: "Farm to Pulp Private Limited",
-  metadataBase: new URL("https://naturepulp.com"),
+  metadataBase: new URL("https://www.naturepulp.com"),
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://naturepulp.com",
+    url: "https://www.naturepulp.com",
     siteName: "Nature Pulp",
-    title: "Nature Pulp | Eco-Friendly Pulp & Sustainable Paper Solutions",
+    title: "Nature Pulp",
     description:
-      "Sustainable pulp and paper made from agricultural waste. Eco-friendly packaging, virgin pulp, recycled pulp & biodegradable paper solutions.",
+      "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nature Pulp - Sustainable Paper Solutions",
+        alt: "Nature Pulp - Sustainable Pulp & Eco-Friendly Paper Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nature Pulp | Eco-Friendly Pulp & Sustainable Paper Solutions",
+    title: "Nature Pulp | Sustainable Pulp & Eco-Friendly Paper Solutions",
     description:
-      "Sustainable pulp and paper made from agricultural waste.",
+      "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -90,10 +90,10 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Nature Pulp",
               legalName: "Farm to Pulp Private Limited",
-              url: "https://naturepulp.com",
-              logo: "https://naturepulp.com/logo.png",
+              url: "https://www.naturepulp.com",
+              logo: "https://www.naturepulp.com/logo.png",
               description:
-                "Sustainable pulp and paper made from agricultural waste.",
+                "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Delhi",

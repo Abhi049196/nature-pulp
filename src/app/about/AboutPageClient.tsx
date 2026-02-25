@@ -108,7 +108,7 @@ export default function AboutPageClient() {
                             <span className="text-gradient">Opportunity</span>
                         </h1>
                         <p className="text-lg text-brand-dark-neutral/70 leading-relaxed max-w-2xl">
-                            At Nature Pulp — a product of Farm to Pulp Private Limited — we see possibility where others see waste. We are transforming agricultural residue into high-quality, sustainable pulp that serves industries worldwide.
+                            At Nature Pulp, we see possibility where others see waste. We are transforming agricultural residue into high-quality, sustainable pulp that serves industries worldwide.
                         </p>
                     </motion.div>
                 </div>
