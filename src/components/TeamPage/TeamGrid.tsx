@@ -15,20 +15,20 @@ const teamMembers = [
     email: "mailto:ceo@company.com",
   },
   {
-    name: "Santosh Agrawal",
-    designation: "Director",
-    bio: "Expert in pulping technology, process engineering, and green manufacturing systems.",
-    image: "/assets/team-image/santosh.png",
-    linkedin: "#",
-    email: "mailto:cto@company.com",
-  },
-  {
     name: "Ganesh Agrawal",
     designation: "Co-Founder and CMO",
     bio: "Supply chain specialist with deep experience in rural procurement and logistics.",
     image: "/assets/team-image/ganesh.png",
     linkedin: "#",
     email: "mailto:coo@company.com",
+  },
+  {
+    name: "Santosh Agrawal",
+    designation: "Director",
+    bio: "Expert in pulping technology, process engineering, and green manufacturing systems.",
+    image: "/assets/team-image/santosh.png",
+    linkedin: "#",
+    email: "mailto:cto@company.com",
   },
   {
     name: "Nitish Kumar",

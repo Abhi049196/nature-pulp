@@ -13,16 +13,16 @@ const teamMembers = [
         image: "/assets/team-image/gopal-jee.png",
     },
     {
-        name: "Santosh Agrawal",
-        designation: "Director",
-        bio: "Expert in pulping technology, process engineering, and green manufacturing systems.",
-        image: "/assets/team-image/santosh.png",
-    },
-    {
         name: "Ganesh Agrawal",
         designation: "Co-Founder and CMO",
         bio: "Supply chain specialist with deep experience in rural procurement and logistics.",
         image: "/assets/team-image/ganesh.png",
+    },
+    {
+        name: "Santosh Agrawal",
+        designation: "Director",
+        bio: "Expert in pulping technology, process engineering, and green manufacturing systems.",
+        image: "/assets/team-image/santosh.png",
     },
 ];
 

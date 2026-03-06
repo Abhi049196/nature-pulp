@@ -109,7 +109,8 @@ To exercise any of these rights, please contact us at support@jeeorigin.com. We 
 **Jee Origin Pvt Ltd**
 Email: support@jeeorigin.com
 Phone: +91 9798973570
-Address: Delhi, India
+Registered Address: H. No. 1198, Sector 16, Near Z Park, Haryana – 121002, India
+Factory Address: Dharam Nagar, Gali No. 1, Near Opposite Jain Mandir, Palwal, Haryana – 121102, India
 
 We are committed to resolving any complaints about our collection or use of your personal information. We will respond to all inquiries within 30 business days.`,
     },

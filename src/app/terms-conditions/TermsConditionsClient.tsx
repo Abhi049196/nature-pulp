@@ -111,7 +111,7 @@ We strongly advise you to read the terms and conditions and privacy policies of 
         title: "10. Governing Law",
         content: `These Terms and Conditions shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions.
 
-Any disputes arising out of or relating to these Terms and Conditions or the use of the website shall be subject to the exclusive jurisdiction of the courts located in Delhi, India.
+Any disputes arising out of or relating to these Terms and Conditions or the use of the website shall be subject to the exclusive jurisdiction of the courts located in Haryana, India.
 
 Our failure to enforce any right or provision of these Terms and Conditions will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.`,
     },
@@ -132,7 +132,8 @@ It is your responsibility to review these Terms periodically for changes. Your c
 **Jee Origin Pvt Ltd**
 Email: support@jeeorigin.com
 Phone: +91 9798973570
-Address: Delhi, India
+Registered Address: H. No. 1198, Sector 16, Near Z Park, Haryana – 121002, India
+Factory Address: Dharam Nagar, Gali No. 1, Near Opposite Jain Mandir, Palwal, Haryana – 121102, India
 
 We aim to acknowledge all inquiries within 2 business days and provide a substantive response within 10 business days.`,
     },

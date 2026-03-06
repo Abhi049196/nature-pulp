@@ -28,9 +28,15 @@ const contactInfo = [
     },
     {
         icon: <MapPin className="w-6 h-6" />,
-        label: "Location",
-        value: "Delhi, India",
-        href: null,
+        label: "Registered Address",
+        value: "H. No. 1198, Sector 16, Near Z Park, Haryana – 121002, India",
+        href: "https://maps.google.com/?q=H.+No.+1198,+Sector+16,+Near+Z+Park,+Haryana+121002",
+    },
+    {
+        icon: <MapPin className="w-6 h-6" />,
+        label: "Factory Address",
+        value: "Dharam Nagar, Gali No. 1, Near Opposite Jain Mandir, Palwal, Haryana – 121102, India",
+        href: "https://maps.google.com/?q=Dharam+Nagar,+Gali+No.+1,+Near+Opposite+Jain+Mandir,+Palwal,+Haryana+121102",
     },
     {
         icon: <Clock className="w-6 h-6" />,
@@ -118,10 +124,11 @@ export default function ContactPageClient() {
                             </div>
 
                             {/* Map placeholder */}
-                            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-brand-soft-green/20 to-brand-dark-green/10 border border-brand-soft-green/10 h-48 flex items-center justify-center">
-                                <div className="text-center">
-                                    <MapPin className="w-8 h-8 text-brand-dark-green/30 mx-auto mb-2" />
-                                    <p className="text-sm text-brand-dark-green/40">Delhi, India</p>
+                            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-brand-soft-green/20 to-brand-dark-green/10 border border-brand-soft-green/10 h-48 flex items-center justify-center p-6 text-center">
+                                <div className="">
+                                    <MapPin className="w-8 h-8 text-brand-dark-green/30 mx-auto mb-3" />
+                                    <p className="text-sm font-medium text-brand-dark-green/60 mb-1">Palwal, Haryana</p>
+                                    <p className="text-xs text-brand-dark-green/40 italic">Serving Sustainability Worldwide</p>
                                 </div>
                             </div>
                         </motion.div>

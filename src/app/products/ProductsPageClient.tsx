@@ -55,6 +55,62 @@ const productCategories = [
             "Certified sustainable",
         ],
     },
+    {
+        title: "Molded Solutions",
+        description:
+            "Premium eco-friendly molded products engineered from sustainable agri-waste fiber. Coming soon to offer superior protection and sustainability for diverse industrial applications.",
+        icon: "📦",
+        href: "/coming-soon",
+        badge: "Coming Soon",
+        features: [
+            "Custom molded shapes",
+            "Shock-absorbent design",
+            "100% compostable",
+            "Zero plastic content",
+        ],
+    },
+    {
+        title: "Kraft Solution",
+        description:
+            "Strong, durable carbon-neutral kraft paper products designed for heavy-duty packaging and industrial use. A sustainable alternative to traditional wood-pulp kraft paper.",
+        icon: "📜",
+        href: "/coming-soon",
+        badge: "Coming Soon",
+        features: [
+            "High tensile strength",
+            "Eco-friendly fiber sourcing",
+            "Versatile weight GSM",
+            "Natural brown finish",
+        ],
+    },
+    {
+        title: "Dippering Solution",
+        description:
+            "Specialized sustainable paper solutions for dipper applications, combining absorbency with wet strength. Engineered specifically for the unique needs of the industry.",
+        icon: "💧",
+        href: "/coming-soon",
+        badge: "Coming Soon",
+        features: [
+            "Controlled absorbency",
+            "High wet strength",
+            "Uniform texture",
+            "Sustainable fiber base",
+        ],
+    },
+    {
+        title: "Packaging Solution",
+        description:
+            "A comprehensive suite of eco-friendly packaging materials designed to replace single-use plastics and non-recyclable materials in global supply chains.",
+        icon: "🎁",
+        href: "/coming-soon",
+        badge: "Coming Soon",
+        features: [
+            "Food-grade safety",
+            "Biodegradable barrier tech",
+            "Customizable printing",
+            "Global logistics safety",
+        ],
+    },
 ];
 
 export default function ProductsPageClient() {

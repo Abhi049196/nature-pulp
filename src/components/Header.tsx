@@ -30,6 +30,30 @@ const navigation = [
                 href: "/products/pulp",
                 desc: "High-quality sustainable pulp.",
                 icon: <PackageOpen className="w-5 h-5" />
+            },
+            {
+                name: "Molded Solutions",
+                href: "/coming-soon",
+                desc: "Premium eco-friendly molded products.",
+                icon: <PackageOpen className="w-5 h-5 opacity-50" />
+            },
+            {
+                name: "Kraft Solution",
+                href: "/coming-soon",
+                desc: "Strong and sustainable kraft paper.",
+                icon: <PackageOpen className="w-5 h-5 opacity-50" />
+            },
+            {
+                name: "Dippering Solution",
+                href: "/coming-soon",
+                desc: "Specialized dipper paper solutions.",
+                icon: <PackageOpen className="w-5 h-5 opacity-50" />
+            },
+            {
+                name: "Packaging Solution",
+                href: "/coming-soon",
+                desc: "Compostable packaging materials.",
+                icon: <PackageOpen className="w-5 h-5 opacity-50" />
             }
         ],
     },

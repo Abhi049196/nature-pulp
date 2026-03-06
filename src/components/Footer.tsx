@@ -2,12 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Mail, Phone, Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Linkedin, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 
 const footerLinks = {
     company: [
         { name: "About Us", href: "/about" },
-        { name: "Our Products", href: "/products" },
+        { name: "Pulp Solutions", href: "/products/pulp" },
+        { name: "Molded Solutions", href: "/coming-soon" },
+        { name: "Kraft Solution", href: "/coming-soon" },
+        { name: "Dippering Solution", href: "/coming-soon" },
+        { name: "Packaging Solution", href: "/coming-soon" },
         { name: "Advisory", href: "/insights/advisory" },
         { name: "Contact Us", href: "/contact" },
     ],
@@ -60,7 +64,7 @@ export default function Footer() {
                             </a>
 
                             <a
-                                href="https://www.instagram.com/nature_pulp?igsh=MXQ2ZGU1NHFoZDJndw=="
+                                href="https://www.instagram.com/jeeorigin?igsh=MWs4OWhyOHd1czloNg%3D%3D&utm_source=qr"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
@@ -69,12 +73,30 @@ export default function Footer() {
                             </a>
 
                             <a
-                                href="https://www.facebook.com/share/18GuVtP9U2/"
+                                href="https://www.facebook.com/share/18BUifjPXL/?mibextid=wwXIfr"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
                             >
                                 <Facebook className="w-4 h-4" />
+                            </a>
+
+                            <a
+                                href="https://x.com/JeeOrigin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
+                            >
+                                <Twitter className="w-4 h-4" />
+                            </a>
+
+                            <a
+                                href="https://youtube.com/@jeeorigin?si=Hff9hzqBdbh_Gpoa"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
+                            >
+                                <Youtube className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
@@ -110,18 +132,35 @@ export default function Footer() {
 
                     <div className="col-span-2">
                         <h4 className="text-[11px] uppercase tracking-[0.2em] text-brand-soft-green font-semibold mb-6">Contact</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div className="space-y-1">
-                                <p className="text-sm font-semibold">Delhi, India</p>
-                                <p className="text-xs text-white/40">Available Worldwide</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div className="space-y-4">
+                                <div>
+                                    <p className="text-[10px] uppercase tracking-wider text-white/40 mb-1">Registered Address</p>
+                                    <p className="text-xs text-white/70 leading-relaxed">
+                                        H. No. 1198, Sector 16,<br />
+                                        Near Z Park, Haryana – 121002, India
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] uppercase tracking-wider text-white/40 mb-1">Factory Address</p>
+                                    <p className="text-xs text-white/70 leading-relaxed">
+                                        Dharam Nagar, Gali No. 1,<br />
+                                        Near Opposite Jain Mandir,<br />
+                                        Palwal, Haryana – 121102, India
+                                    </p>
+                                </div>
                             </div>
-                            <div className="space-y-2">
-                                <p className="text-xs text-white/60 flex items-center gap-2">
-                                    <Phone className="w-3.5 h-3.5 text-brand-soft-green/60" /> +91 97989 73570
-                                </p>
-                                <p className="text-xs text-white/60 flex items-center gap-2">
-                                    <Mail className="w-3.5 h-3.5 text-brand-soft-green/60" /> support@jeeorigin.com
-                                </p>
+                            <div className="space-y-4">
+                                <p className="text-[10px] uppercase tracking-wider text-white/40 mb-1">Get In Touch</p>
+                                <div className="space-y-2">
+                                    <p className="text-xs text-white/60 flex items-center gap-2">
+                                        <Phone className="w-3.5 h-3.5 text-brand-soft-green/60" /> +91 97989 73570
+                                    </p>
+                                    <p className="text-xs text-white/60 flex items-center gap-2">
+                                        <Mail className="w-3.5 h-3.5 text-brand-soft-green/60" /> support@jeeorigin.com
+                                    </p>
+                                </div>
+                                <p className="text-xs text-white/40 italic">Available Worldwide</p>
                             </div>
                         </div>
                     </div>

@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   description:
     "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
 
-    icons: {
-  icon: [
-    { url: "/favicon.ico" },
-    { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-  ],
-  apple: "/apple-touch-icon.png",
-},
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 
-manifest: "/site.webmanifest",
+  manifest: "/site.webmanifest",
   keywords: [
     "eco friendly pulp",
     "agricultural waste paper",
@@ -106,8 +106,11 @@ export default function RootLayout({
                 "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Delhi",
-                addressCountry: "IN",
+                "@id": "https://www.jeeorigin.com/#address",
+                "streetAddress": "H. No. 1198, Sector 16, Near Z Park",
+                "addressLocality": "Haryana",
+                "postalCode": "121002",
+                "addressCountry": "IN",
               },
               contactPoint: {
                 "@type": "ContactPoint",
@@ -116,9 +119,11 @@ export default function RootLayout({
                 email: "support@jeeorigin.com",
               },
               sameAs: [
-                "https://www.instagram.com/jeeorigin",
-                "https://www.linkedin.com/company/jeeorigin",
-                "https://twitter.com/jeeorigin",
+                "https://www.linkedin.com/company/nature-pulp/",
+                "https://www.instagram.com/jeeorigin?igsh=MWs4OWhyOHd1czloNg%3D%3D&utm_source=qr",
+                "https://www.facebook.com/share/18BUifjPXL/?mibextid=wwXIfr",
+                "https://x.com/JeeOrigin",
+                "https://youtube.com/@jeeorigin?si=Hff9hzqBdbh_Gpoa"
               ],
             }),
           }}
