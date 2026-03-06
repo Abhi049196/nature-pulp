@@ -7,7 +7,7 @@ import Image from "next/image";
 const pulpTypes = [
     {
         name: "Virgin Pulp",
-        image: "/assets/virgin-pulp.png",
+        image: "/assets/virginpulp.png",
         icon: "🌿",
         badge: "Premium",
         shortDesc: "Highest-grade agri-waste pulp for premium applications",
@@ -27,7 +27,7 @@ const pulpTypes = [
     },
     {
         name: "Imported Agri-Waste Pulp",
-        image: "/assets/imported-agri-waste-pulp.png",
+        image: "/assets/Agri-Waste.png",
         icon: "🌾",
         badge: "Versatile",
         shortDesc: "Multi-source fibers for mid-range applications",
@@ -47,7 +47,7 @@ const pulpTypes = [
     },
     {
         name: "Recycled Pulp",
-        image: "/assets/recycled-pulp.png",
+        image: "/assets/recycle-pulp.png",
         icon: "♻️",
         badge: "Eco-Certified",
         shortDesc: "Post-consumer recycled fiber for cost-effective products",
