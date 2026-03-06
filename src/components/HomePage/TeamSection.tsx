@@ -52,7 +52,7 @@ export default function TeamSection() {
                             <div className="relative rounded-3xl overflow-hidden bg-brand-light-bg border border-brand-soft-green/10 hover:shadow-xl hover:shadow-brand-dark-green/5 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
 
                                 {/* Image */}
-                                <div className="relative aspect-[3/3.5] overflow-hidden">
+                                <div className="relative aspect-[3/4] overflow-hidden">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
