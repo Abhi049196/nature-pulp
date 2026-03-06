@@ -34,7 +34,7 @@ export default function Footer() {
                             <Image
                                 src="/footer-logo.png"
                                 alt="Nature Pulp Logo"
-                                width={140}
+                                width={100}
                                 height={40}
                                 className="brightness-0 invert opacity-80"
                             />

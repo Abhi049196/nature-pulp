@@ -53,9 +53,9 @@ export default function Header() {
                     <Link href="/" className="flex items-center gap-2 group">
 
                         <Image
-                            src="/logo.svg"
+                            src="/company-logo.png"
                             alt="Nature Pulp Logo"
-                            width={80}
+                            width={60}
                             height={10}
                             className="object-contain"
                             priority
