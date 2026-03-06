@@ -114,7 +114,7 @@ export default function AboutPageClient() {
                 </div>
             </section>
 
-            {/* Brand Story */}
+            {/* BrandStory */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -213,7 +213,7 @@ export default function AboutPageClient() {
                 </div>
             </section>
 
-            {/* Core Values */}
+            {/* CoreValues */}
             <section className="py-24 bg-brand-light-bg">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionHeading
@@ -250,7 +250,7 @@ export default function AboutPageClient() {
                 </div>
             </section>
 
-            {/* Impact Numbers */}
+            {/* ImpactNumbers */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionHeading

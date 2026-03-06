@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AboutPageClient from "./AboutPageClient";
+import Index from "@/components/AboutPage/Index";
 
 export const metadata: Metadata = {
     title: "About Us",
@@ -13,5 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-    return <AboutPageClient />;
+    return (
+        <>
+        <Index />
+        </>
+    )
 }

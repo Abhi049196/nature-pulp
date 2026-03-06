@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
   description:
     "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
+
+    icons: {
+  icon: [
+    { url: "/favicon.ico" },
+    { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+  ],
+  apple: "/apple-touch-icon.png",
+},
+
+manifest: "/site.webmanifest",
   keywords: [
     "eco friendly pulp",
     "agricultural waste paper",
@@ -81,7 +92,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${barlow.variable} ${glacial.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

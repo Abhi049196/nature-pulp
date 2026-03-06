@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PulpPageClient from "./PulpPageClient";
+import Index from "@/components/PulpPage/Index";
 
 export const metadata: Metadata = {
     title: "Pulp Products",
@@ -13,5 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function PulpPage() {
-    return <PulpPageClient />;
+    return (
+        <>
+        <Index />
+        </>
+    )
 }

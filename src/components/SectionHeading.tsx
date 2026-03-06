@@ -39,7 +39,7 @@ export default function SectionHeading({
                 </span>
             )}
             <h2
-                className={`font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight ${light ? "text-white" : "text-brand-dark-green"
+                className={`font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight ${light ? "text-white" : "text-brand-dark-green"
                     }`}
             >
                 {title}

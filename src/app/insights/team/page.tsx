@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TeamPageClient from "./TeamPageClient";
+import Index from "@/components/TeamPage/Index";
 
 export const metadata: Metadata = {
     title: "Our Team",
@@ -12,5 +13,9 @@ export const metadata: Metadata = {
 };
 
 export default function TeamPage() {
-    return <TeamPageClient />;
+    return (
+        <>
+        <Index />
+        </>
+    )
 }

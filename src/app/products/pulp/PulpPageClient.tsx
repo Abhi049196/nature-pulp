@@ -97,7 +97,7 @@ export default function PulpPageClient() {
                 </div>
             </section>
 
-            {/* Pulp Types Detail */}
+            {/* PulpTypes Detail */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="space-y-20">
@@ -185,7 +185,7 @@ export default function PulpPageClient() {
                 </div>
             </section>
 
-            {/* Quality Assurance */}
+            {/* QualityAssurance */}
             <section className="py-24 bg-brand-light-bg">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionHeading

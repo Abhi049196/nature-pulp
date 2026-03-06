@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AdvisoryPageClient from "./AdvisoryPageClient";
+import Index from "@/components/Advisory/Index";
 
 export const metadata: Metadata = {
     title: "Advisory",
@@ -12,5 +13,9 @@ export const metadata: Metadata = {
 };
 
 export default function AdvisoryPage() {
-    return <AdvisoryPageClient />;
+    return (
+        <>
+        <Index />
+        </>
+    )
 }
