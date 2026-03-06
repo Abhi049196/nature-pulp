@@ -5,9 +5,9 @@ import Index from "@/components/Advisory/Index";
 export const metadata: Metadata = {
     title: "Advisory",
     description:
-        "Expert insights and advisory services from Nature Pulp on sustainable pulp manufacturing, agri-waste processing, and building circular economy models.",
+        "Expert insights and advisory services from Jee Origin on sustainable pulp manufacturing, agri-waste processing, and building circular economy models.",
     openGraph: {
-        title: "Advisory Services | Nature Pulp",
+        title: "Advisory Services | Jee Origin",
         description: "Expert advisory on sustainable pulp and paper manufacturing.",
     },
 };
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function AdvisoryPage() {
     return (
         <>
-        <Index />
+            <Index />
         </>
     )
 }

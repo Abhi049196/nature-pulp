@@ -11,6 +11,7 @@ interface ProductCardProps {
     href: string;
     index?: number;
     gradient?: string;
+    badge?: string;
 }
 
 export default function ProductCard({
@@ -20,6 +21,7 @@ export default function ProductCard({
     href,
     index = 0,
     gradient = "from-brand-dark-green/5 to-brand-soft-green/10",
+    badge,
 }: ProductCardProps) {
     return (
         <motion.div
@@ -30,7 +32,7 @@ export default function ProductCard({
         >
             <Link
                 href={href}
-                className={`group block relative p-8 rounded-3xl bg-gradient-to-br ${gradient} border border-transparent hover:border-brand-soft-green/30 hover:shadow-xl hover:shadow-brand-dark-green/5 transition-all duration-500 h-full`}
+                className={`group block relative p-6 sm:p-8 rounded-3xl bg-gradient-to-br ${gradient} border border-transparent hover:border-brand-soft-green/30 hover:shadow-xl hover:shadow-brand-dark-green/5 transition-all duration-500 h-full`}
             >
                 {/* Icon */}
                 <div className="w-14 h-14 rounded-2xl bg-brand-dark-green/10 text-brand-dark-green flex items-center justify-center mb-5 group-hover:bg-brand-dark-green group-hover:text-white transition-all duration-300 group-hover:scale-110">
@@ -38,6 +40,13 @@ export default function ProductCard({
                 </div>
 
                 {/* Content */}
+                {badge && (
+                    <div className="mb-3">
+                        <span className="inline-block px-3 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-brand-soft-green/20 text-brand-dark-green">
+                            {badge}
+                        </span>
+                    </div>
+                )}
                 <h3 className="font-heading text-xl font-bold text-brand-dark-green mb-3 group-hover:text-brand-dark-green/90 transition-colors">
                     {title}
                 </h3>

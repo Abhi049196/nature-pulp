@@ -7,9 +7,9 @@ const sections = [
     {
         id: "introduction",
         title: "1. Introduction",
-        content: `Welcome to Nature Pulp ("we," "our," or "us"), a product of Farm to Pulp Private Limited. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.naturepulp.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
+        content: `Welcome to Jee Origin ("we," "our," or "us"), a product of Jee Origin Pvt Ltd. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.jeeorigin.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
 
-We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices with regards to your personal information, please contact us at contact@naturepulp.com.`,
+We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices with regards to your personal information, please contact us at support@jeeorigin.com.`,
     },
     {
         id: "information-collected",
@@ -89,7 +89,7 @@ You can instruct your browser to refuse all cookies or to indicate when a cookie
 - **Right to Data Portability:** You can request a machine-readable copy of your personal information.
 - **Right to Withdraw Consent:** Where processing is based on consent, you can withdraw your consent at any time.
 
-To exercise any of these rights, please contact us at contact@naturepulp.com. We will respond to your request within 30 days.`,
+To exercise any of these rights, please contact us at support@jeeorigin.com. We will respond to your request within 30 days.`,
     },
     {
         id: "children",
@@ -106,8 +106,8 @@ To exercise any of these rights, please contact us at contact@naturepulp.com. We
         title: "10. Contact Us",
         content: `If you have questions or comments about this Privacy Policy, you may contact us at:
 
-**Farm to Pulp Private Limited (Nature Pulp)**
-Email: contact@naturepulp.com
+**Jee Origin Pvt Ltd**
+Email: support@jeeorigin.com
 Phone: +91 9798973570
 Address: Delhi, India
 

@@ -55,7 +55,7 @@ const milestones = [
     {
         year: "Foundation",
         title: "The Seed Was Planted",
-        desc: "Nature Pulp was born from a simple question: Why are we burning agricultural waste when it can build a sustainable future?",
+        desc: "Jee Origin was born from a simple question: Why are we burning agricultural waste when it can build a sustainable future?",
     },
     {
         year: "Growth",
@@ -108,7 +108,7 @@ export default function AboutPageClient() {
                             <span className="text-gradient">Opportunity</span>
                         </h1>
                         <p className="text-lg text-brand-dark-neutral/70 leading-relaxed max-w-2xl">
-                            At Nature Pulp, we see possibility where others see waste. We are transforming agricultural residue into high-quality, sustainable pulp that serves industries worldwide.
+                            At Jee Origin, we see possibility where others see waste. We are transforming agricultural residue into high-quality, sustainable pulp that serves industries worldwide.
                         </p>
                     </motion.div>
                 </div>
@@ -133,7 +133,7 @@ export default function AboutPageClient() {
                                     India produces over 500 million tons of agricultural waste annually. Most of it is burned in the open — polluting air, destroying soil health, and contributing to climate change. We saw this not as a problem, but as the world&apos;s largest untapped raw material.
                                 </p>
                                 <p>
-                                    Nature Pulp was founded with a radical vision: to build a bridge between India&apos;s farming communities and the global paper industry. By sourcing wheat straw, rice husk, sugarcane bagasse, and other crop residues directly from farmers, we create premium-grade pulp that meets international quality standards.
+                                    Jee Origin was founded with a radical vision: to build a bridge between India&apos;s farming communities and the global paper industry. By sourcing wheat straw, rice husk, sugarcane bagasse, and other crop residues directly from farmers, we create premium-grade pulp that meets international quality standards.
                                 </p>
                                 <p>
                                     Our model is simple but transformative: Buy waste from farmers, process it with advanced technology, and deliver sustainable raw materials to paper mills and packaging companies — all while maintaining zero-waste operations and empowering rural economies.
@@ -205,7 +205,7 @@ export default function AboutPageClient() {
                         <div className="flex items-center justify-center gap-3">
                             <div className="w-12 h-0.5 bg-white/30" />
                             <span className="text-brand-soft-green text-sm font-medium tracking-wider uppercase">
-                                Nature Pulp Manifesto
+                                Jee Origin Manifesto
                             </span>
                             <div className="w-12 h-0.5 bg-white/30" />
                         </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Globe, Recycle, Heart, Cpu } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import DecorativeLeaf from "@/components/DecorativeLeaf";
 
 /* ============== DATA (Original Content Preserved) ============== */
 const sustainabilityPillars = [
@@ -69,6 +70,11 @@ function SustainabilityCommitment() {
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-brand-dark-green/30 rounded-full blur-[120px]" />
         {/* Subtle Grid Overlay */}
         <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+
+        {/* Floating Leaves */}
+        <DecorativeLeaf className="w-32 h-32 top-10 right-[15%] text-brand-soft-green" rotation={45} delay={0.5} duration={12} opacity={0.15} />
+        <DecorativeLeaf className="w-24 h-24 top-1/2 left-[5%] text-brand-dark-green" rotation={-25} delay={1.8} duration={10} opacity={0.1} />
+        <DecorativeLeaf className="w-16 h-16 bottom-[10%] right-[30%] text-white" rotation={80} delay={0.3} duration={14} opacity={0.08} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -90,11 +96,11 @@ function SustainabilityCommitment() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-brand-soft-green/50 transition-all duration-500 overflow-hidden"
+              className="group relative p-6 sm:p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-brand-soft-green/50 transition-all duration-500 overflow-hidden"
             >
               {/* Hover Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-brand-soft-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               <div className="relative z-10">
                 <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-brand-soft-green mb-6 group-hover:scale-110 group-hover:bg-brand-soft-green group-hover:text-white transition-all duration-500 shadow-lg">
                   {pillar.icon}
@@ -131,7 +137,7 @@ function SustainabilityCommitment() {
           </motion.div>
 
           {/* Stats Grid - Using your existing AnimatedCounter with improved layout padding */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 bg-white/[0.02] border border-white/5 rounded-[40px] p-10 backdrop-blur-md">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 bg-white/[0.02] border border-white/5 rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 backdrop-blur-md">
             {sustainabilityStats.map((stat, index) => (
               <div key={stat.label} className="relative group">
                 <AnimatedCounter {...stat} index={index} />

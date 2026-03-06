@@ -1,45 +1,122 @@
 import { NextResponse } from "next/server";
+import { connectToDatabase } from "@/lib/mongodb";
+import { sendContactNotification } from "@/lib/resend";
+
+// ─── Simple in-memory rate limiter ───
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT = 5; // max submissions
+const RATE_WINDOW = 60 * 60 * 1000; // 1 hour
+
+function isRateLimited(ip: string): boolean {
+    const now = Date.now();
+    const entry = rateLimitMap.get(ip);
+
+    if (!entry || now > entry.resetTime) {
+        rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
+        return false;
+    }
+
+    entry.count++;
+    return entry.count > RATE_LIMIT;
+}
+
+// ─── Input sanitization ───
+function sanitize(input: string): string {
+    return input
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;")
+        .trim();
+}
+
+// ─── Validation helpers ───
+function isValidEmail(email: string): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isValidPhone(phone: string): boolean {
+    // Allow numbers, spaces, +, -, (, ) — minimum 7 digits
+    const digits = phone.replace(/\D/g, "");
+    return digits.length >= 7 && digits.length <= 15;
+}
 
 export async function POST(request: Request) {
     try {
+        // Rate limiting
+        const forwarded = request.headers.get("x-forwarded-for");
+        const ip = forwarded?.split(",")[0]?.trim() || "unknown";
+
+        if (isRateLimited(ip)) {
+            return NextResponse.json(
+                { error: "Too many submissions. Please try again later." },
+                { status: 429 }
+            );
+        }
+
         const formData = await request.formData();
 
         const data = {
-            name: formData.get("name") as string,
-            address: formData.get("address") as string,
-            email: formData.get("email") as string,
-            phone: formData.get("phone") as string,
-            subject: formData.get("subject") as string,
-            message: formData.get("message") as string,
+            name: sanitize((formData.get("name") as string) || ""),
+            address: sanitize((formData.get("address") as string) || ""),
+            email: ((formData.get("email") as string) || "").trim().toLowerCase(),
+            phone: sanitize((formData.get("phone") as string) || ""),
+            subject: sanitize((formData.get("subject") as string) || ""),
+            message: sanitize((formData.get("message") as string) || ""),
         };
 
-        // Validate required fields
-        if (!data.name || !data.email || !data.subject || !data.message) {
+        // ─── Validate required fields ───
+        const errors: Record<string, string> = {};
+
+        if (!data.name || data.name.length < 2) {
+            errors.name = "Full name is required (minimum 2 characters).";
+        }
+        if (!data.email || !isValidEmail(data.email)) {
+            errors.email = "Please enter a valid email address.";
+        }
+        if (data.phone && !isValidPhone(data.phone)) {
+            errors.phone = "Please enter a valid phone number.";
+        }
+        if (!data.subject || data.subject.length < 3) {
+            errors.subject = "Subject is required (minimum 3 characters).";
+        }
+        if (!data.message || data.message.length < 10) {
+            errors.message = "Message is required (minimum 10 characters).";
+        }
+
+        if (Object.keys(errors).length > 0) {
             return NextResponse.json(
-                { error: "Missing required fields" },
+                { error: "Validation failed", errors },
                 { status: 400 }
             );
         }
 
-        // TODO: Store in Supabase
-        // const { error: dbError } = await supabase
-        //   .from("contact_submissions")
-        //   .insert([data]);
-        // if (dbError) throw dbError;
+        // ─── Store in MongoDB ───
+        const { db } = await connectToDatabase();
+        const collection = db.collection("contacts");
 
-        // TODO: Send email notification via Resend
-        // await sendContactNotification(data);
+        await collection.insertOne({
+            ...data,
+            createdAt: new Date(),
+        });
 
-        console.log("Contact form submission:", data);
+        console.log("✅ Contact saved to MongoDB:", data.name);
+
+        // ─── Send emails via Resend ───
+        const emailResult = await sendContactNotification(data);
+
+        if (!emailResult.success) {
+            console.warn("⚠️ Contact saved but email failed:", emailResult.error);
+        }
 
         return NextResponse.json(
-            { success: true, message: "Form submitted successfully" },
+            { success: true, message: "Form submitted successfully. A confirmation email has been sent." },
             { status: 200 }
         );
     } catch (error) {
-        console.error("Contact form error:", error);
+        console.error("❌ Contact form error:", error);
         return NextResponse.json(
-            { error: "Failed to process submission" },
+            { error: "Failed to process submission. Please try again." },
             { status: 500 }
         );
     }

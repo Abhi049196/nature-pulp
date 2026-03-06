@@ -33,7 +33,7 @@ export default function Footer() {
                         <Link href="/" className="block">
                             <Image
                                 src="/footer-logo.png"
-                                alt="Nature Pulp Logo"
+                                alt="Jee Origin Logo"
                                 width={100}
                                 height={40}
                                 className="brightness-0 invert opacity-80"
@@ -46,8 +46,8 @@ export default function Footer() {
 
                     <div className="space-y-4">
                         <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-bold">Direct Inquiry</p>
-                        <a href="mailto:contact@naturepulp.com" className="text-xl font-medium hover:text-brand-soft-green transition-colors block">
-                            contact@naturepulp.com
+                        <a href="mailto:support@jeeorigin.com" className="text-xl font-medium hover:text-brand-soft-green transition-colors block">
+                            support@jeeorigin.com
                         </a>
                         <div className="flex gap-4 pt-2">
                             <a
@@ -120,7 +120,7 @@ export default function Footer() {
                                     <Phone className="w-3.5 h-3.5 text-brand-soft-green/60" /> +91 97989 73570
                                 </p>
                                 <p className="text-xs text-white/60 flex items-center gap-2">
-                                    <Mail className="w-3.5 h-3.5 text-brand-soft-green/60" /> hello@naturepulp.com
+                                    <Mail className="w-3.5 h-3.5 text-brand-soft-green/60" /> support@jeeorigin.com
                                 </p>
                             </div>
                         </div>
@@ -128,11 +128,21 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-10 flex flex-col sm:flex-row justify-between items-center gap-6">
-                    <div className="flex items-center gap-4 text-[10px] text-white/20 uppercase tracking-widest font-bold">
-                        <span>© 2026 Nature Pulp</span>
-                        <span className="w-1 h-1 bg-white/10 rounded-full" />
-                        <span>Farm to Pulp Pvt. Ltd.</span>
+                <div className="mt-10 flex flex-col lg:flex-row justify-between items-center gap-6">
+                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[10px] text-white/20 uppercase tracking-widest font-bold">
+                        <span>© 2026 Jee Origin Pvt Ltd</span>
+                        <span className="w-1 h-1 bg-white/10 rounded-full hidden sm:block" />
+                        <span className="w-full sm:w-auto text-center sm:text-left mt-2 sm:mt-0">
+                            Created by{" "}
+                            <a
+                                href="https://freelancerabhi.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-brand-soft-green hover:text-white transition-colors"
+                            >
+                                Freelancer Abhi
+                            </a>
+                        </span>
                     </div>
 
                     <div className="flex gap-8">

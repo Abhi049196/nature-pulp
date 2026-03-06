@@ -49,7 +49,7 @@ export default function HeroBanner() {
 
           {/* Description */}
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-            At Nature Pulp, we see possibility where others see waste. We are transforming agricultural residue into high-quality, sustainable pulp that serves industries worldwide.
+            At Jee Origin, we see possibility where others see waste. We are transforming agricultural residue into high-quality, sustainable pulp that serves industries worldwide.
           </p>
 
         </motion.div>

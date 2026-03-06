@@ -4,9 +4,9 @@ import PrivacyPolicyClient from "./PrivacyPolicyClient";
 export const metadata: Metadata = {
     title: "Privacy Policy",
     description:
-        "Nature Pulp's privacy policy details how we collect, use, and protect your personal information.",
+        "Jee Origin's privacy policy details how we collect, use, and protect your personal information.",
     openGraph: {
-        title: "Privacy Policy | Nature Pulp",
+        title: "Privacy Policy | Jee Origin",
         description: "Our commitment to protecting your personal information.",
     },
 };

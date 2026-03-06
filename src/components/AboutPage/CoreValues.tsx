@@ -46,14 +46,14 @@ const coreValues = [
 
 function CoreValues() {
     return (
-        <section className="py-20 bg-[#F9F9F8] relative overflow-hidden"> 
-            
+        <section className="py-20 bg-[#F9F9F8] relative overflow-hidden">
+
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <header className="mb-2">
                     <SectionHeading
                         badge="Our Foundation"
                         title="Values That Shape the Future"
-                        subtitle="Nature Pulp is built on five core principles that drive our innovation and environmental stewardship."
+                        subtitle="Jee Origin is built on five core principles that drive our innovation and environmental stewardship."
                     />
                 </header>
 
@@ -75,7 +75,7 @@ function CoreValues() {
                             `}
                         >
                             {/* Decorative Corner Glow (Hover par icon color mein badlega) */}
-                            <div 
+                            <div
                                 className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-bl-full pointer-events-none over"
                                 style={{ backgroundColor: value.color }}
                             />
@@ -86,7 +86,7 @@ function CoreValues() {
                             </div>
 
                             {/* Icon Container with Soft Background */}
-                            <div 
+                            <div
                                 className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-sm transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg"
                                 style={{ backgroundColor: `${value.color}08`, color: value.color }}
                             >
@@ -96,7 +96,7 @@ function CoreValues() {
                             <h3 className="text-2xl font-bold text-brand-dark-green mb-1 tracking-tight leading-tight">
                                 {value.title}
                             </h3>
-                            
+
                             <p className="text-zinc-500 text-base leading-relaxed group-hover:text-brand-dark-green transition-colors">
                                 {value.description}
                             </p>

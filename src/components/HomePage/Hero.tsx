@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles, Leaf, Cpu, Users, Sprout } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative h-[100dvh] min-h-[550px] lg:h-auto lg:min-h-screen flex items-center overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute inset-0 warm-gradient" />
 
@@ -15,7 +15,7 @@ export default function Hero() {
                 <motion.div
                     animate={{ y: [-20, 20, -20], rotate: [0, 10, 0] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-20 right-[15%] w-32 h-32 bg-brand-soft-green/10 rounded-full blur-xl"
+                    className="absolute top-20 right-[15%] w-32 h-32 bg-brand-soft-green/10 rounded-full blur-xl hidden sm:block"
                 />
                 <motion.div
                     animate={{ y: [20, -20, 20], rotate: [0, -10, 0] }}
@@ -59,18 +59,18 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-32 pb-4 sm:pb-20 flex flex-col justify-center h-full">
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-16 items-center flex-grow">
                     {/* Left Column - Text */}
-                    <div>
+                    <div className="flex flex-col justify-center h-full lg:block mt-8 sm:mt-0">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-dark-green/5 border border-brand-dark-green/10 mb-8"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-brand-dark-green/5 border border-brand-dark-green/10 mb-5 sm:mb-8 self-start"
                         >
-                            <Sparkles className="w-4 h-4 text-brand-accent-brown" />
-                            <span className="text-sm font-medium text-brand-dark-green">
+                            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-accent-brown shrink-0" />
+                            <span className="text-[11px] sm:text-sm font-medium text-brand-dark-green line-clamp-1">
                                 Redefining Sustainability with Global Innovation
                             </span>
                         </motion.div>
@@ -79,9 +79,9 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.1 }}
-                            className="font-heading text-5xl sm:text-6xl lg:text-5xl font-bold text-brand-dark-green leading-[1.1] mb-6"
+                            className="font-heading text-[2.75rem] leading-[1.05] tracking-tight sm:text-6xl lg:text-5xl font-bold text-brand-dark-green mb-4 sm:mb-6"
                         >
-                            Nature Pulp:{" "}
+                            Jee Origin:{" "}
                             <span className="text-gradient">Paper That</span>{" "}
                             Grows the Future
                         </motion.h1>
@@ -90,29 +90,29 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                            className="text-lg sm:text-xl text-brand-dark-neutral/70 leading-relaxed mb-10 max-w-xl"
+                            className="text-[13px] sm:text-xl text-brand-dark-neutral/80 leading-relaxed mb-6 sm:mb-10 max-w-xl"
                         >
-                            At Nature Pulp, we&apos;re transforming the pulp and paper industry by turning agricultural waste into a force for good. Using sugarcane bagasse, wheat straw, imported agri-waste pulp, virgin pulp, recycled pulp, and responsibly sourced wood, we craft eco-friendly products that power a circular economy.
+                            At Jee Origin, we&apos;re transforming the pulp and paper industry by turning agricultural waste into a force for good. Using sugarcane bagasse, wheat straw, imported agri-waste pulp, virgin pulp, recycled pulp, and responsibly sourced wood, we craft eco-friendly products that power a circular economy.
                         </motion.p>
 
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
-                            className="flex flex-col sm:flex-row gap-4"
+                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
                         >
                             <Link
                                 href="/products"
                                 id="hero-cta-products"
-                                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-dark-green text-white rounded-full font-semibold text-base hover:bg-brand-dark-green/90 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-dark-green/25 hover:-translate-y-1"
+                                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 bg-brand-dark-green text-white rounded-full font-semibold text-sm sm:text-base hover:bg-brand-dark-green/90 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-dark-green/25 hover:-translate-y-1 w-full sm:w-auto"
                             >
                                 Explore Our Products
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link
                                 href="/about"
                                 id="hero-cta-vision"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-brand-dark-green text-brand-dark-green rounded-full font-semibold text-base hover:bg-brand-dark-green hover:text-white transition-all duration-300 hover:-translate-y-1"
+                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 border-2 border-brand-dark-green text-brand-dark-green rounded-full font-semibold text-sm sm:text-base hover:bg-brand-dark-green hover:text-white transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
                             >
                                 Our Vision
                             </Link>
@@ -193,29 +193,6 @@ export default function Hero() {
                     </motion.div>
                 </div>
 
-                {/* Trust Badges */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="mt-20 pt-12 border-t border-brand-dark-green/5"
-                >
-                    <p className="text-center text-sm text-brand-dark-neutral/40 mb-8 uppercase tracking-wider font-medium">
-                        Trusted by industries worldwide
-                    </p>
-                    <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-                        {["Food & Beverage", "E-commerce", "Publishing", "Electronics", "Paper Mills"].map(
-                            (industry) => (
-                                <span
-                                    key={industry}
-                                    className="font-heading text-lg font-bold text-brand-dark-green/60"
-                                >
-                                    {industry}
-                                </span>
-                            )
-                        )}
-                    </div>
-                </motion.div>
             </div>
         </section>
     );

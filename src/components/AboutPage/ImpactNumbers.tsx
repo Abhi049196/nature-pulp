@@ -55,7 +55,7 @@ const milestones = [
     {
         year: "Foundation",
         title: "The Seed Was Planted",
-        desc: "Nature Pulp was born from a simple question: Why are we burning agricultural waste when it can build a sustainable future?",
+        desc: "Jee Origin was born from a simple question: Why are we burning agricultural waste when it can build a sustainable future?",
     },
     {
         year: "Growth",
@@ -75,9 +75,9 @@ const milestones = [
 ];
 
 function ImpactNumbers() {
-  return (
-    <div>
-        <section className="py-24 bg-white">
+    return (
+        <div>
+            <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionHeading
                         badge="Our Impact"
@@ -112,8 +112,8 @@ function ImpactNumbers() {
                     </div>
                 </div>
             </section>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default ImpactNumbers

@@ -5,9 +5,9 @@ import Index from "@/components/TeamPage/Index";
 export const metadata: Metadata = {
     title: "Our Team",
     description:
-        "Meet the passionate team behind Nature Pulp — experts in sustainable manufacturing, agricultural science, and circular economy innovation.",
+        "Meet the passionate team behind Jee Origin — experts in sustainable manufacturing, agricultural science, and circular economy innovation.",
     openGraph: {
-        title: "Our Team | Nature Pulp",
+        title: "Our Team | Jee Origin",
         description: "Meet the team driving sustainable pulp innovation.",
     },
 };
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function TeamPage() {
     return (
         <>
-        <Index />
+            <Index />
         </>
     )
 }

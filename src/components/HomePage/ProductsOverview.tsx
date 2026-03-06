@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Layers, Box, FileText, Printer } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import ProductCard from "@/components/ProductCard";
+import DecorativeLeaf from "@/components/DecorativeLeaf";
 
 /* ============== DATA (Original Content Maintained) ============== */
 const products = [
@@ -51,6 +52,10 @@ function ProductsOverview() {
         <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] rounded-full bg-brand-dark-green/5 blur-[120px]" />
       </div>
 
+      <DecorativeLeaf className="w-28 h-28 top-20 left-[5%] text-brand-soft-green" rotation={15} delay={0.2} duration={11} opacity={0.1} />
+      <DecorativeLeaf className="w-16 h-16 bottom-[30%] right-[10%] text-brand-dark-green" rotation={-30} delay={1.5} opacity={0.08} />
+      <DecorativeLeaf className="w-20 h-20 bottom-10 left-[20%] text-brand-accent-brown" rotation={75} delay={0.8} duration={13} opacity={0.05} />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <SectionHeading
@@ -93,11 +98,11 @@ function ProductsOverview() {
           >
             {/* Glossy overlay effect on hover */}
             <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            
+
             <span className="relative z-10">See All Solutions</span>
             <ArrowRight className="relative z-10 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
           </Link>
-          
+
           <p className="mt-6 text-sm font-medium text-slate-400 uppercase tracking-widest">
             Explore our full catalog
           </p>

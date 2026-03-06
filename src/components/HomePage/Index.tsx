@@ -5,18 +5,22 @@ import MissionVision from './Mission&Vision'
 import ProductsOverview from './ProductsOverview'
 import SustainabilityCommitment from './SustainabilityCommitment'
 import Industries from './Industries'
+import TeamSection from './TeamSection'
+import FAQSection from './FAQSection'
 import CTA from '../CTA'
 
 function Index() {
   return (
     <div>
-        <Hero />
-        <WhyChoose />
-        <MissionVision />
-        <ProductsOverview />
-        <SustainabilityCommitment />
-        <Industries />
-        <CTA />
+      <Hero />
+      <WhyChoose />
+      <MissionVision />
+      <ProductsOverview />
+      <SustainabilityCommitment />
+      <Industries />
+      <TeamSection />
+      <FAQSection />
+      <CTA />
     </div>
   )
 }

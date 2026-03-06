@@ -25,7 +25,7 @@ const careerFields = [
         ],
     },
     { name: "cv", label: "Upload CV", type: "file" as const, accept: ".pdf,.doc,.docx", required: true },
-    { name: "remarks", label: "Remarks / Cover Note", type: "textarea" as const, placeholder: "Tell us why you'd like to join Nature Pulp...", required: false },
+    { name: "remarks", label: "Remarks / Cover Note", type: "textarea" as const, placeholder: "Tell us why you'd like to join Jee Origin...", required: false },
 ];
 
 const perks = [
@@ -84,7 +84,7 @@ export default function CareerPageClient() {
                     <SectionHeading
                         badge="Why Join Us"
                         title="More Than Just a Job"
-                        subtitle="At Nature Pulp, your career is a force for positive change."
+                        subtitle="At Jee Origin, your career is a force for positive change."
                     />
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {perks.map((perk, index) => (

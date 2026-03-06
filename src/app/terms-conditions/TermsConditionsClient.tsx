@@ -7,7 +7,7 @@ const sections = [
     {
         id: "acceptance",
         title: "1. Acceptance of Terms",
-        content: `By accessing and using the Nature Pulp website (www.naturepulp.com), operated by Farm to Pulp Private Limited, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
+        content: `By accessing and using the Jee Origin website (www.jeeorigin.com), operated by Jee Origin Pvt Ltd, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
 
 These Terms and Conditions apply to all visitors, users, and others who access or use the website. By accessing or using the website, you agree to be bound by these terms. If you disagree with any part of the terms, then you may not access the website.`,
     },
@@ -28,7 +28,7 @@ These Terms and Conditions apply to all visitors, users, and others who access o
     {
         id: "intellectual-property",
         title: "3. Intellectual Property Rights",
-        content: `The website and its entire contents, features, and functionality — including but not limited to all information, software, text, displays, images, video, audio, design, selection, and arrangement — are owned by Farm to Pulp Private Limited, its licensors, or other providers and are protected by Indian and international copyright, trademark, patent, trade secret, and other intellectual property laws.
+        content: `The website and its entire contents, features, and functionality — including but not limited to all information, software, text, displays, images, video, audio, design, selection, and arrangement — are owned by Jee Origin Pvt Ltd, its licensors, or other providers and are protected by Indian and international copyright, trademark, patent, trade secret, and other intellectual property laws.
 
 **You may not:**
 - Modify copies of any materials from the website
@@ -36,7 +36,7 @@ These Terms and Conditions apply to all visitors, users, and others who access o
 - Delete or alter any copyright, trademark, or other proprietary rights notices
 - Access or use any part of the website for any commercial purpose without our express written consent
 
-The Nature Pulp name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Farm to Pulp Private Limited. You must not use such marks without our prior written permission.`,
+The Jee Origin name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Jee Origin Pvt Ltd. You must not use such marks without our prior written permission.`,
     },
     {
         id: "product-information",
@@ -78,7 +78,7 @@ Your use of the website is at your sole risk. This disclaimer does not affect an
     {
         id: "limitation-of-liability",
         title: "7. Limitation of Liability",
-        content: `To the maximum extent permitted by applicable law, Farm to Pulp Private Limited and its directors, employees, agents, partners, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+        content: `To the maximum extent permitted by applicable law, Jee Origin Pvt Ltd and its directors, employees, agents, partners, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
 
 - Loss of profits, data, use, goodwill, or other intangible losses
 - Damages resulting from your access to or use of, or inability to access or use, the website
@@ -90,7 +90,7 @@ In no event shall our total liability to you for all claims exceed the amount pa
     {
         id: "indemnification",
         title: "8. Indemnification",
-        content: `You agree to defend, indemnify, and hold harmless Farm to Pulp Private Limited and its officers, directors, employees, agents, licensors, and suppliers from and against any claims, actions, demands, liabilities, and settlements, including legal and accounting fees, resulting from or alleged to result from:
+        content: `You agree to defend, indemnify, and hold harmless Jee Origin Pvt Ltd and its officers, directors, employees, agents, licensors, and suppliers from and against any claims, actions, demands, liabilities, and settlements, including legal and accounting fees, resulting from or alleged to result from:
 
 - Your violation of these Terms and Conditions
 - Your use of the website
@@ -100,7 +100,7 @@ In no event shall our total liability to you for all claims exceed the amount pa
     {
         id: "third-party-links",
         title: "9. Third-Party Links",
-        content: `Our website may contain links to third-party websites or services that are not owned or controlled by Nature Pulp. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
+        content: `Our website may contain links to third-party websites or services that are not owned or controlled by Jee Origin. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
 
 We do not warrant the offerings of any third parties. You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such third-party websites or services.
 
@@ -129,8 +129,8 @@ It is your responsibility to review these Terms periodically for changes. Your c
         title: "12. Contact Information",
         content: `For questions about these Terms and Conditions, please contact us at:
 
-**Farm to Pulp Private Limited (Nature Pulp)**
-Email: contact@naturepulp.com
+**Jee Origin Pvt Ltd**
+Email: support@jeeorigin.com
 Phone: +91 9798973570
 Address: Delhi, India
 

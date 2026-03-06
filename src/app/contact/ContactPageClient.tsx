@@ -17,8 +17,8 @@ const contactInfo = [
     {
         icon: <Mail className="w-6 h-6" />,
         label: "Email",
-        value: "contact@naturepulp.com",
-        href: "mailto:contact@naturepulp.com",
+        value: "support@jeeorigin.com",
+        href: "mailto:support@jeeorigin.com",
     },
     {
         icon: <Phone className="w-6 h-6" />,

@@ -33,9 +33,9 @@ export default function Manifesto() {
 
           {/* Quote */}
           <blockquote className="text-2xl md:text-3xl leading-[1.6] text-white font-medium mb-12">
-            “Waste is an <span className="text-[#87A685] italic">opportunity</span>. 
-            Every straw we save from burning, every farmer we empower, 
-            every sheet of paper we produce — it all counts toward a world 
+            “Waste is an <span className="text-[#87A685] italic">opportunity</span>.
+            Every straw we save from burning, every farmer we empower,
+            every sheet of paper we produce — it all counts toward a world
             where <span className="underline decoration-[#87A685] decoration-2 underline-offset-4">sustainability</span> is the standard.”
           </blockquote>
 
@@ -43,7 +43,7 @@ export default function Manifesto() {
           <div className="flex items-center gap-6">
             <div className="w-24 h-[2px] bg-[#87A685]" />
             <span className="text-white tracking-[0.3em] uppercase text-sm">
-              Nature Pulp Manifesto
+              Jee Origin Manifesto
             </span>
           </div>
 

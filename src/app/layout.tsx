@@ -17,11 +17,11 @@ const glacial = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Nature Pulp | Sustainable Pulp & Eco-Friendly Paper Solutions",
-    template: "%s | Nature Pulp",
+    default: "Jee Origin | Sustainable Pulp & Eco-Friendly Paper Solutions",
+    template: "%s | Jee Origin",
   },
   description:
-    "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
+    "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
 
     icons: {
   icon: [
@@ -41,34 +41,34 @@ manifest: "/site.webmanifest",
     "pulp manufacturer India",
     "sugarcane bagasse pulp",
     "recycled pulp",
-    "Nature Pulp",
+    "Jee Origin",
   ],
-  authors: [{ name: "Farm to Pulp Private Limited" }],
-  creator: "Nature Pulp",
-  publisher: "Farm to Pulp Private Limited",
-  metadataBase: new URL("https://www.naturepulp.com"),
+  authors: [{ name: "Jee Origin Pvt Ltd" }],
+  creator: "Jee Origin",
+  publisher: "Jee Origin Pvt Ltd",
+  metadataBase: new URL("https://www.jeeorigin.com"),
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.naturepulp.com",
-    siteName: "Nature Pulp",
-    title: "Nature Pulp",
+    url: "https://www.jeeorigin.com",
+    siteName: "Jee Origin",
+    title: "Jee Origin",
     description:
-      "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
+      "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nature Pulp - Sustainable Pulp & Eco-Friendly Paper Solutions",
+        alt: "Jee Origin - Sustainable Pulp & Eco-Friendly Paper Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nature Pulp | Sustainable Pulp & Eco-Friendly Paper Solutions",
+    title: "Jee Origin | Sustainable Pulp & Eco-Friendly Paper Solutions",
     description:
-      "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
+      "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -98,12 +98,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Nature Pulp",
-              legalName: "Farm to Pulp Private Limited",
-              url: "https://www.naturepulp.com",
-              logo: "https://www.naturepulp.com/logo.png",
+              name: "Jee Origin",
+              legalName: "Jee Origin Pvt Ltd",
+              url: "https://www.jeeorigin.com",
+              logo: "https://www.jeeorigin.com/logo.png",
               description:
-                "Nature Pulp transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
+                "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Delhi",
@@ -113,12 +113,12 @@ export default function RootLayout({
                 "@type": "ContactPoint",
                 telephone: "+91-9798973570",
                 contactType: "customer service",
-                email: "contact@naturepulp.com",
+                email: "support@jeeorigin.com",
               },
               sameAs: [
-                "https://www.instagram.com/naturepulp",
-                "https://www.linkedin.com/company/naturepulp",
-                "https://twitter.com/naturepulp",
+                "https://www.instagram.com/jeeorigin",
+                "https://www.linkedin.com/company/jeeorigin",
+                "https://twitter.com/jeeorigin",
               ],
             }),
           }}

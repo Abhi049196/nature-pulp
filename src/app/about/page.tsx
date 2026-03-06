@@ -5,18 +5,18 @@ import Index from "@/components/AboutPage/Index";
 export const metadata: Metadata = {
     title: "About Us",
     description:
-        "Learn about Nature Pulp's journey from agricultural waste to premium pulp. Discover our mission, values, and commitment to building a sustainable future.",
+        "Learn about Jee Origin's journey from agricultural waste to premium pulp. Discover our mission, values, and commitment to building a sustainable future.",
     openGraph: {
-        title: "About Us | Nature Pulp",
+        title: "About Us | Jee Origin",
         description:
-            "Learn about Nature Pulp's journey from agricultural waste to premium pulp.",
+            "Learn about Jee Origin's journey from agricultural waste to premium pulp.",
     },
 };
 
 export default function AboutPage() {
     return (
         <>
-        <Index />
+            <Index />
         </>
     )
 }

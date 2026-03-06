@@ -7,7 +7,7 @@ const milestones = [
     id: "01",
     year: "Foundation",
     title: "The Seed Was Planted",
-    desc: "Nature Pulp was born from a simple question: Why are we burning agricultural waste when it can build a sustainable future?",
+    desc: "Jee Origin was born from a simple question: Why are we burning agricultural waste when it can build a sustainable future?",
   },
   {
     id: "02",
@@ -52,7 +52,7 @@ export default function BrandStory() {
 
             <div className="max-w-3xl">
               <p className="text-2xl leading-relaxed text-brand-dark-neutral/80">
-                India produces over 500 million tons of agricultural waste annually. 
+                India produces over 500 million tons of agricultural waste annually.
                 We saw this not as a problem, but as the world’s largest untapped raw material.
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function BrandStory() {
             whileInView={{ opacity: 1 }}
             className="text-xl leading-relaxed text-brand-dark-neutral/75"
           >
-            Nature Pulp was founded with a radical vision: to build a bridge between India’s farming communities and the global paper industry. By sourcing wheat straw, rice husk, and sugarcane bagasse directly from farmers, we create premium-grade pulp that meets international quality standards.
+            Jee Origin was founded with a radical vision: to build a bridge between India’s farming communities and the global paper industry. By sourcing wheat straw, rice husk, and sugarcane bagasse directly from farmers, we create premium-grade pulp that meets international quality standards.
           </motion.p>
 
           <motion.p

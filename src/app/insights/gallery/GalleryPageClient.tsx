@@ -14,7 +14,7 @@ const galleryItems = [
     { id: 4, category: "Community", title: "Farmer Training", desc: "Educating farming communities on waste management", height: "h-64" },
     { id: 5, category: "Farm", title: "Rice Husk Processing", desc: "Rice husk being prepared for pulp conversion", height: "h-72" },
     { id: 6, category: "Factory", title: "Quality Testing Lab", desc: "Rigorous quality control at our testing facility", height: "h-80" },
-    { id: 7, category: "Events", title: "Industry Conference", desc: "Nature Pulp at the Global Sustainability Summit", height: "h-64" },
+    { id: 7, category: "Events", title: "Industry Conference", desc: "Jee Origin at the Global Sustainability Summit", height: "h-64" },
     { id: 8, category: "Products", title: "Recycled Pulp", desc: "High-quality recycled pulp output", height: "h-72" },
     { id: 9, category: "Community", title: "Rural Empowerment", desc: "Building livelihoods through waste procurement", height: "h-80" },
     { id: 10, category: "Factory", title: "Production Line", desc: "Continuous production for consistent supply", height: "h-64" },
@@ -74,8 +74,8 @@ export default function GalleryPageClient() {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
-                                        ? "bg-brand-dark-green text-white shadow-lg shadow-brand-dark-green/20"
-                                        : "bg-brand-light-bg text-brand-dark-neutral/60 hover:bg-brand-soft-green/20 hover:text-brand-dark-green"
+                                    ? "bg-brand-dark-green text-white shadow-lg shadow-brand-dark-green/20"
+                                    : "bg-brand-light-bg text-brand-dark-neutral/60 hover:bg-brand-soft-green/20 hover:text-brand-dark-green"
                                     }`}
                             >
                                 {category}
