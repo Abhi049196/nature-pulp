@@ -10,19 +10,19 @@ const teamMembers = [
         name: "Gopal Jee",
         designation: "Co-Founder And CEO",
         bio: "Visionary leader with 15+ years in sustainable manufacturing and agri-waste innovation.",
-        image: "/assets/team-image/gopal-jee.png",
+        image: "/assets/team-image/gopal.png",
     },
     {
         name: "Ganesh Agrawal",
         designation: "Co-Founder and CMO",
         bio: "Supply chain specialist with deep experience in rural procurement and logistics.",
-        image: "/assets/team-image/ganesh.png",
+        image: "/assets/team-image/ganesh-agrawal.png",
     },
     {
         name: "Santosh Agrawal",
         designation: "Director",
         bio: "Expert in pulping technology, process engineering, and green manufacturing systems.",
-        image: "/assets/team-image/santosh.png",
+        image: "/assets/team-image/santosh-agrawall.png",
     },
 ];
 
