@@ -9,13 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@mux/mux-player-react": "^3.11.5",
     "@supabase/supabase-js": "^2.97.0",
     "framer-motion": "^12.34.3",
     "lucide-react": "^0.575.0",
     "mongodb": "^7.1.0",
     "next": "16.1.6",
+    "next-video": "^2.6.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-player": "^3.4.0",
     "resend": "^6.9.2"
   },
   "devDependencies": {

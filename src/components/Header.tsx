@@ -23,7 +23,7 @@ const navigation = [
     { name: "About Us", href: "/about" },
     {
         name: "Products",
-        href: "/products",
+        href: "#",
         children: [
             {
                 name: "Pulp Solutions",
@@ -298,7 +298,7 @@ export default function Header() {
                                                                     className="pb-2"
                                                                 >
                                                                     <div className="pl-4 border-l-2 border-brand-soft-green/30 space-y-3 mt-2 mb-2">
-                                                                        {item.children.map((child) => (
+                                                                        {item.children?.filter(child => child.href !== '/products').map((child) => (
                                                                             <Link
                                                                                 key={child.name}
                                                                                 href={child.href}

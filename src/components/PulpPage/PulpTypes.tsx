@@ -13,10 +13,10 @@ const pulpTypes = [
         shortDesc: "Highest-grade agri-waste pulp for premium applications",
         color: "bg-emerald-50",
         specs: {
-            brightness: "82-88% ISO",
+            brightness: "70-85% ISO",
             strength: "High tensile & burst",
-            source: "Wheat straw, Bagasse",
-            process: "Chemical pulping, ECF bleaching",
+            source: "Agriculture Waste",
+            process: "Chemical free - Ozone bleaching",
         },
         applications: [
             "Premium writing paper",
@@ -33,7 +33,7 @@ const pulpTypes = [
         shortDesc: "Multi-source fibers for mid-range applications",
         color: "bg-amber-50",
         specs: {
-            brightness: "72-80% ISO",
+            brightness: "65-75% ISO",
             strength: "Medium-high",
             source: "Global agri-waste blend",
             process: "Soda-AQ pulping",

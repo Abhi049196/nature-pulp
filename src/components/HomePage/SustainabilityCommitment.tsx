@@ -39,6 +39,27 @@ const sustainabilityStats = [
     icon: "♻️",
   },
   {
+    target: 10,
+    suffix: "M",
+    label: "Trees Saved",
+    description: "Preventing deforestation through sustainable sourcing",
+    icon: "🌳",
+  },
+  {
+    target: 1,
+    suffix: "M+",
+    label: "CO2 Carbon Credit",
+    description: "Significant contribution to global carbon reduction",
+    icon: "💎",
+  },
+  {
+    target: 2,
+    suffix: "X",
+    label: "Farmers Income Increase",
+    description: "Doubling rural earnings through waste procurement",
+    icon: "📈",
+  },
+  {
     target: 100000,
     suffix: "+",
     label: "Farmers Empowered",
@@ -136,17 +157,37 @@ function SustainabilityCommitment() {
             </p>
           </motion.div>
 
-          {/* Stats Grid - Using your existing AnimatedCounter with improved layout padding */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 bg-white/[0.02] border border-white/5 rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 backdrop-blur-md">
-            {sustainabilityStats.map((stat, index) => (
-              <div key={stat.label} className="relative group">
-                <AnimatedCounter {...stat} index={index} />
-                {/* Vertical Divider for Desktop */}
-                {index !== sustainabilityStats.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/4 right-[-20px] w-[1px] h-1/2 bg-white/10" />
-                )}
-              </div>
-            ))}
+          {/* Stats Slider - Auto-scrolling and draggable */}
+          <div className="relative group">
+            <div className="overflow-hidden bg-white/[0.02] border border-white/5 rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 backdrop-blur-md">
+              <motion.div
+                className="flex gap-8 sm:gap-10"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{
+                  duration: 30,
+                  ease: "linear",
+                  repeat: Infinity,
+                }}
+                whileHover={{ animationPlayState: "paused" }}
+                style={{ width: "fit-content" }}
+              >
+                {/* Doubling the items for a seamless loop */}
+                {[...sustainabilityStats, ...sustainabilityStats].map((stat, idx) => (
+                  <div
+                    key={`${stat.label}-${idx}`}
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] relative"
+                  >
+                    <AnimatedCounter {...stat} index={idx} />
+                    {/* Vertical Divider for Desktop (only if it's not the last item in the viewport) */}
+                    <div className="absolute top-1/4 right-[-20px] w-[1px] h-1/2 bg-white/10 hidden sm:block" />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Fade effect on edges */}
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0A2619] to-transparent z-10 pointer-events-none rounded-l-[40px]" />
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0A2619] to-transparent z-10 pointer-events-none rounded-r-[40px]" />
           </div>
         </div>
       </div>

@@ -12,10 +12,10 @@ const pulpTypes = [
         badge: "Premium",
         shortDesc: "Highest-grade agri-waste pulp for premium applications",
         specs: {
-            brightness: "82-88% ISO",
+            brightness: "70-85% ISO",
             strength: "High tensile & burst",
-            source: "Wheat straw, Bagasse",
-            process: "Chemical pulping, ECF bleaching",
+            source: "Agriculture Waste",
+            process: "Chemical free - Ozone bleaching",
         },
         applications: [
             "Premium writing paper",
@@ -30,7 +30,7 @@ const pulpTypes = [
         badge: "Versatile",
         shortDesc: "Multi-source fibers for mid-range applications",
         specs: {
-            brightness: "72-80% ISO",
+            brightness: "65-75% ISO",
             strength: "Medium-high",
             source: "Global agri-waste blend",
             process: "Soda-AQ pulping",
@@ -76,12 +76,11 @@ export default function PulpPageClient() {
                         className="max-w-3xl"
                     >
                         <div className="flex items-center gap-2 mb-6">
-                            <Link
-                                href="/products"
-                                className="text-sm text-brand-dark-neutral/50 hover:text-brand-dark-green transition-colors"
+                            <span
+                                className="text-sm text-brand-dark-neutral/50"
                             >
                                 Products
-                            </Link>
+                            </span>
                             <span className="text-brand-dark-neutral/30">/</span>
                             <span className="text-sm text-brand-dark-green font-medium">
                                 Pulp

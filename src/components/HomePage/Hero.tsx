@@ -2,109 +2,128 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Leaf, Cpu, Users, Sprout } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, Cpu, Users, ChevronDown, Recycle, Globe } from "lucide-react";
+
+
+const floatingStats = [
+    {
+        icon: <Leaf className="w-5 h-5 text-brand-soft-green" />,
+        label: "Sustainable",
+        value: "Zero Waste",
+        position: "top-16 right-8",
+        delay: 0.6,
+        animDuration: 4,
+        animDir: [-10, 10, -10] as number[],
+    },
+    {
+        icon: <Users className="w-5 h-5 text-amber-400" />,
+        label: "Empowering",
+        value: "100K+ Farmers",
+        position: "bottom-28 left-0",
+        delay: 0.8,
+        animDuration: 5,
+        animDir: [10, -10, 10] as number[],
+    },
+    {
+        icon: <Cpu className="w-5 h-5 text-emerald-300" />,
+        label: "AI & IoT",
+        value: "Tech-Driven",
+        position: "top-1/2 -right-4",
+        delay: 1.0,
+        animDuration: 6,
+        animDir: [-8, 8, -8] as number[],
+    },
+];
 
 export default function Hero() {
     return (
-        <section className="relative h-[100dvh] min-h-[550px] lg:h-auto lg:min-h-screen flex items-center overflow-hidden">
-            {/* Background Gradient */}
-            <div className="absolute inset-0 warm-gradient" />
+        <section className="relative h-[100dvh] min-h-[600px] flex items-center overflow-hidden">
 
-            {/* Animated Background Elements — subtle parallax eco shapes */}
-            <div className="absolute inset-0 overflow-hidden">
-                <motion.div
-                    animate={{ y: [-20, 20, -20], rotate: [0, 10, 0] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-20 right-[15%] w-32 h-32 bg-brand-soft-green/10 rounded-full blur-xl hidden sm:block"
+            {/* Video Background (Vimeo iframe) */}
+            <div className="absolute inset-0 z-0 pointer-events-none w-[110vw] h-[110vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <iframe
+                    src="https://player.vimeo.com/video/1171814387?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full object-cover scale-[1.05]"
+                    title="Background Video"
                 />
-                <motion.div
-                    animate={{ y: [20, -20, 20], rotate: [0, -10, 0] }}
-                    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-40 left-[10%] w-48 h-48 bg-brand-dark-green/5 rounded-full blur-2xl"
-                />
-                <motion.div
-                    animate={{ y: [-15, 15, -15] }}
-                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute bottom-32 right-[25%] w-40 h-40 bg-brand-accent-brown/8 rounded-full blur-2xl"
-                />
-                <motion.div
-                    animate={{ y: [10, -10, 10], x: [-5, 5, -5] }}
-                    transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute bottom-20 left-[20%] w-24 h-24 bg-brand-soft-green/15 rounded-full blur-xl"
-                />
-
-                {/* Abstract leaf SVG patterns */}
-                <motion.svg
-                    animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                    className="absolute top-[15%] right-[8%] w-64 h-64 opacity-[0.03]"
-                    viewBox="0 0 200 200"
-                >
-                    <path
-                        d="M100 0 C150 50, 200 100, 100 200 C0 100, 50 50, 100 0Z"
-                        fill="#1B4D3E"
-                    />
-                </motion.svg>
-                <motion.svg
-                    animate={{ rotate: [360, 0] }}
-                    transition={{ duration: 75, repeat: Infinity, ease: "linear" }}
-                    className="absolute bottom-[10%] left-[5%] w-48 h-48 opacity-[0.04]"
-                    viewBox="0 0 200 200"
-                >
-                    <path
-                        d="M100 0 C150 50, 200 100, 100 200 C0 100, 50 50, 100 0Z"
-                        fill="#A5BBA0"
-                    />
-                </motion.svg>
             </div>
 
+            {/* Multi-layer overlays for depth & readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A2619]/85 via-[#0A2619]/70 to-[#0A2619]/90 z-[1]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A2619]/70 via-transparent to-[#0A2619]/30 z-[2]" />
+
+            {/* Subtle grain texture */}
+            <div className="absolute inset-0 z-[3] opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+
+            {/* Decorative ambient glows */}
+            <div className="absolute top-[-15%] left-[-8%] w-[50%] h-[50%] bg-brand-soft-green/8 rounded-full blur-[150px] z-[3]" />
+            <div className="absolute bottom-[-15%] right-[-8%] w-[45%] h-[45%] bg-emerald-600/10 rounded-full blur-[120px] z-[3]" />
+            <div className="absolute top-[40%] right-[20%] w-[30%] h-[30%] bg-brand-accent-brown/5 rounded-full blur-[100px] z-[3]" />
+
             {/* Content */}
-            <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-32 pb-4 sm:pb-20 flex flex-col justify-center h-full">
-                <div className="grid lg:grid-cols-2 gap-6 sm:gap-16 items-center flex-grow">
-                    {/* Left Column - Text */}
-                    <div className="flex flex-col justify-center h-full lg:block mt-8 sm:mt-0">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+                    {/* Left Column — Text Content */}
+                    <div className="flex flex-col justify-center mt-4 sm:mt-0">
+
+                        {/* Badge */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-brand-dark-green/5 border border-brand-dark-green/10 mb-5 sm:mb-8 self-start"
+                            transition={{ duration: 0.5 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-sm mb-6 sm:mb-8 self-start"
                         >
-                            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-accent-brown shrink-0" />
-                            <span className="text-[11px] sm:text-sm font-medium text-brand-dark-green line-clamp-1">
+                            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+                            <span className="text-[11px] sm:text-sm font-medium text-white/70 line-clamp-1">
                                 Redefining Sustainability with Global Innovation
                             </span>
                         </motion.div>
 
+                        {/* Heading */}
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.1 }}
-                            className="font-heading text-[2.75rem] leading-[1.05] tracking-tight sm:text-6xl lg:text-5xl font-bold text-brand-dark-green mb-4 sm:mb-6"
+                            className="font-heading text-[2.75rem] leading-[1.05] tracking-tight sm:text-6xl lg:text-[3.5rem] xl:text-6xl font-bold text-white mb-5 sm:mb-7"
                         >
                             Jee Origin:{" "}
-                            <span className="text-gradient">Paper That</span>{" "}
+                            <span className="relative inline-block">
+                                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brand-soft-green via-emerald-300 to-teal-300">
+                                    Paper That
+                                </span>
+                            </span>{" "}
                             Grows the Future
                         </motion.h1>
 
+                        {/* Description */}
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                            className="text-[13px] sm:text-xl text-brand-dark-neutral/80 leading-relaxed mb-6 sm:mb-10 max-w-xl"
+                            className="text-[13px] sm:text-lg lg:text-xl text-white/55 leading-relaxed mb-8 sm:mb-10 max-w-xl font-light"
                         >
-                            At Jee Origin, we&apos;re transforming the pulp and paper industry by turning agricultural waste into a force for good. Using sugarcane bagasse, wheat straw, imported agri-waste pulp, virgin pulp, recycled pulp, and responsibly sourced wood, we craft eco-friendly products that power a circular economy.
+                            At Jee Origin, we&apos;re transforming the pulp and paper industry by
+                            turning agricultural waste into a force for good. Using sugarcane
+                            bagasse, wheat straw, imported agri-waste pulp, virgin pulp,
+                            recycled pulp, and responsibly sourced wood, we craft eco-friendly
+                            products that power a circular economy.
                         </motion.p>
 
+                        {/* CTA Buttons */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
-                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
+                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mb-10"
                         >
                             <Link
-                                href="/products"
+                                href="/products/pulp"
                                 id="hero-cta-products"
-                                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 bg-brand-dark-green text-white rounded-full font-semibold text-sm sm:text-base hover:bg-brand-dark-green/90 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-dark-green/25 hover:-translate-y-1 w-full sm:w-auto"
+                                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:px-9 sm:py-4 bg-gradient-to-r from-brand-soft-green to-emerald-400 text-[#0A2619] rounded-full font-bold text-sm sm:text-base shadow-[0_8px_30px_rgba(165,187,160,0.3)] hover:shadow-[0_12px_40px_rgba(165,187,160,0.45)] hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto"
                             >
                                 Explore Our Products
                                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -112,14 +131,39 @@ export default function Hero() {
                             <Link
                                 href="/about"
                                 id="hero-cta-vision"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 border-2 border-brand-dark-green text-brand-dark-green rounded-full font-semibold text-sm sm:text-base hover:bg-brand-dark-green hover:text-white transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
+                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:px-9 sm:py-4 border border-white/20 text-white rounded-full font-semibold text-sm sm:text-base hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
                             >
                                 Our Vision
                             </Link>
                         </motion.div>
+
+                        {/* Trust indicators */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                            className="flex flex-wrap items-center gap-6"
+                        >
+                            {[
+                                { icon: <Recycle className="w-4 h-4" />, text: "Zero Waste" },
+                                { icon: <Globe className="w-4 h-4" />, text: "Global Supply" },
+                                { icon: <Leaf className="w-4 h-4" />, text: "Eco Certified" },
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={item.text}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.6 + i * 0.1 }}
+                                    className="flex items-center gap-2"
+                                >
+                                    <span className="text-brand-soft-green/70">{item.icon}</span>
+                                    <span className="text-xs font-medium text-white/40">{item.text}</span>
+                                </motion.div>
+                            ))}
+                        </motion.div>
                     </div>
 
-                    {/* Right Column - Visual */}
+                    {/* Right Column — Floating Glass Stat Cards */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -127,73 +171,74 @@ export default function Hero() {
                         className="relative hidden lg:block"
                     >
                         <div className="relative w-full aspect-square max-w-lg mx-auto">
-                            {/* Main circle */}
-                            <div className="absolute inset-8 rounded-full eco-gradient opacity-20 blur-2xl animate-pulse" />
-                            <div className="absolute inset-8 rounded-full bg-gradient-to-br from-brand-dark-green/10 to-brand-soft-green/20 border border-brand-soft-green/30 backdrop-blur-sm" />
+                            {/* Central glowing circle */}
+                            <div className="absolute inset-12 rounded-full bg-gradient-to-br from-brand-soft-green/10 to-emerald-500/5 border border-white/[0.06] backdrop-blur-sm" />
+                            <div className="absolute inset-12 rounded-full bg-brand-soft-green/5 blur-2xl animate-pulse" />
 
                             {/* Floating stat cards */}
-                            <motion.div
-                                animate={{ y: [-10, 10, -10] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute top-12 right-12 glass-card rounded-2xl p-4 shadow-lg"
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-brand-dark-green/10 flex items-center justify-center">
-                                        <Leaf className="w-5 h-5 text-brand-dark-green" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-brand-dark-neutral/60">Sustainable</p>
-                                        <p className="text-sm font-bold text-brand-dark-green">Zero Waste</p>
-                                    </div>
-                                </div>
-                            </motion.div>
+                            {floatingStats.map((stat) => (
+                                <motion.div
+                                    key={stat.value}
+                                    animate={{ y: stat.animDir }}
+                                    transition={{ duration: stat.animDuration, repeat: Infinity, ease: "easeInOut" }}
+                                    className={`absolute ${stat.position} z-10`}
+                                >
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: stat.delay }}
+                                        className="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white/[0.06] backdrop-blur-xl border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+                                    >
+                                        <div className="w-10 h-10 rounded-xl bg-white/[0.08] flex items-center justify-center">
+                                            {stat.icon}
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-white/50">{stat.label}</p>
+                                            <p className="text-sm font-bold text-white">{stat.value}</p>
+                                        </div>
+                                    </motion.div>
+                                </motion.div>
+                            ))}
 
-                            <motion.div
-                                animate={{ y: [10, -10, 10] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute bottom-20 left-4 glass-card rounded-2xl p-4 shadow-lg"
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-brand-accent-brown/10 flex items-center justify-center">
-                                        <Users className="w-5 h-5 text-brand-accent-brown" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-brand-dark-neutral/60">Empowering</p>
-                                        <p className="text-sm font-bold text-brand-dark-green">100K+ Farmers</p>
-                                    </div>
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                animate={{ y: [-8, 8, -8] }}
-                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute top-1/2 right-0 glass-card rounded-2xl p-4 shadow-lg"
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-brand-soft-green/20 flex items-center justify-center">
-                                        <Cpu className="w-5 h-5 text-brand-dark-green" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-brand-dark-neutral/60">AI & IoT</p>
-                                        <p className="text-sm font-bold text-brand-dark-green">Tech-Driven</p>
-                                    </div>
-                                </div>
-                            </motion.div>
-
-                            {/* Center icon */}
+                            {/* Central rotating element */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <motion.div
                                     animate={{ rotate: [0, 360] }}
-                                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                                    transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                                    className="w-24 h-24 rounded-full border border-white/[0.04] flex items-center justify-center"
                                 >
-                                    <Sprout className="w-28 h-28 text-brand-dark-green/15" />
+                                    <Leaf className="w-10 h-10 text-white/[0.08]" />
                                 </motion.div>
                             </div>
+
+                            {/* Orbiting ring */}
+                            <motion.div
+                                animate={{ rotate: [0, 360] }}
+                                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                                className="absolute inset-16 rounded-full border border-dashed border-white/[0.04]"
+                            />
                         </div>
                     </motion.div>
                 </div>
-
             </div>
+
+            {/* Scroll indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+            >
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white/25 font-bold">
+                    Scroll
+                </span>
+                <motion.div
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                    <ChevronDown className="w-5 h-5 text-white/25" />
+                </motion.div>
+            </motion.div>
         </section>
     );
 }
