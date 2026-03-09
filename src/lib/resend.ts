@@ -13,7 +13,7 @@ const WEBSITE = "https://www.jeeorigin.com";
 const LOGO_URL = "https://www.jeeorigin.com/logo.png";
 
 // ═══════════════════════════════════════════════════════════════
-//  SHARED EMAIL LAYOUT
+//  SHARED EMAIL LAYOUTf
 // ═══════════════════════════════════════════════════════════════
 
 function emailWrapper(content: string): string {
