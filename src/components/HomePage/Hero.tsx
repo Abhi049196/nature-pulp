@@ -26,9 +26,9 @@ const floatingStats = [
         animDir: [10, -10, 10] as number[],
     },
     {
-        icon: <Cpu className="w-5 h-5 text-emerald-300" />,
-        label: "AI & IoT",
-        value: "Tech-Driven",
+        icon: <Globe className="w-5 h-5 text-emerald-300" />,
+        label: "Eco-Friendly",
+        value: "Chemical-Free",
         position: "top-1/2 -right-4",
         delay: 1.0,
         animDuration: 6,
@@ -38,12 +38,12 @@ const floatingStats = [
 
 export default function Hero() {
     return (
-        <section className="relative h-[100dvh] min-h-[600px] flex items-center overflow-hidden">
+        <section className="relative h-[100dvh] min-h-[700px] flex items-center overflow-hidden">
 
             {/* Fallback Image (shown while video loads) */}
             <div className="absolute inset-0 z-[-1]">
                 <Image
-                    src="/assets/factory.jpg"
+                    src="/assets/hero.webp"
                     alt="Sustainable Pulp Factory"
                     fill
                     priority
@@ -52,13 +52,13 @@ export default function Hero() {
             </div>
 
             {/* Video Background (Vimeo iframe) */}
-            <div className="absolute inset-0 z-0 pointer-events-none w-[110vw] h-[110vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                 <iframe
                     src="https://player.vimeo.com/video/1171814387?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
-                    className="w-full h-full object-cover scale-[1.05]"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[110vw] min-h-[110vh] w-auto h-auto"
                     title="Background Video"
                 />
             </div>
@@ -76,11 +76,11 @@ export default function Hero() {
             <div className="absolute top-[40%] right-[20%] w-[30%] h-[30%] bg-brand-accent-brown/5 rounded-full blur-[100px] z-[3]" />
 
             {/* Content */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-28 sm:pt-24 pb-20 sm:pb-8">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                     {/* Left Column — Text Content */}
-                    <div className="flex flex-col justify-center mt-4 sm:mt-0">
+                    <div className="flex flex-col justify-center">
 
                         {/* Badge */}
                         <motion.div
@@ -100,7 +100,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.1 }}
-                            className="font-heading text-[2.75rem] leading-[1.05] tracking-tight sm:text-6xl lg:text-[3.5rem] xl:text-6xl font-bold text-white mb-5 sm:mb-7"
+                            className="font-heading text-[2.2rem] leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-white mb-4 sm:mb-7"
                         >
                             Jee Origin:{" "}
                             <span className="relative inline-block">
@@ -116,7 +116,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                            className="text-[13px] sm:text-lg lg:text-xl text-white/55 leading-relaxed mb-8 sm:mb-10 max-w-xl font-light"
+                            className="text-[13px] sm:text-lg lg:text-xl text-white/55 leading-relaxed mb-6 sm:mb-10 max-w-xl font-light"
                         >
                             At Jee Origin, we&apos;re transforming the pulp and paper industry by
                             turning agricultural waste into a force for good. Using sugarcane
@@ -130,7 +130,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
-                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mb-10"
+                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mb-6 sm:mb-10"
                         >
                             <Link
                                 href="/products/pulp"
@@ -154,7 +154,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.5 }}
-                            className="flex flex-wrap items-center gap-6"
+                            className="flex flex-wrap items-center gap-4 sm:gap-6"
                         >
                             {[
                                 { icon: <Recycle className="w-4 h-4" />, text: "Zero Waste" },
@@ -183,8 +183,17 @@ export default function Hero() {
                         className="relative hidden lg:block"
                     >
                         <div className="relative w-full aspect-square max-w-lg mx-auto">
-                            {/* Central glowing circle */}
-                            <div className="absolute inset-12 rounded-full bg-gradient-to-br from-brand-soft-green/10 to-emerald-500/5 border border-white/[0.06] backdrop-blur-sm" />
+                            {/* Central hero image circle */}
+                            <div className="absolute inset-12 rounded-full overflow-hidden border border-white/[0.1] shadow-[0_0_60px_rgba(16,185,129,0.15)]">
+                                <Image
+                                    src="/assets/hero.webp"
+                                    alt="Jee Origin - Sustainable Pulp"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A2619]/40" />
+                            </div>
                             <div className="absolute inset-12 rounded-full bg-brand-soft-green/5 blur-2xl animate-pulse" />
 
                             {/* Floating stat cards */}
@@ -239,7 +248,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+                className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2"
             >
                 <span className="text-[10px] uppercase tracking-[0.2em] text-white/25 font-bold">
                     Scroll

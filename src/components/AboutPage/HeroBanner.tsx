@@ -31,7 +31,7 @@ export default function HeroBanner() {
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-6 text-white/70">
             <Link
-              href="/products"
+              href="/"
               className="text-sm hover:text-white transition-colors"
             >
               Home

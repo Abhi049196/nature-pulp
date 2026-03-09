@@ -22,7 +22,7 @@ const products = [
     title: "Compostable Packaging",
     description:
       "100% biodegradable packaging solutions for food, logistics, and retail — designed to decompose, not pollute.",
-    href: "/products",
+    href: "/coming-soon",
     gradient: "from-orange-500/20 to-amber-500/10",
   },
   {
@@ -30,7 +30,7 @@ const products = [
     title: "Specialty Papers",
     description:
       "Bespoke paper grades for publishing, office supplies, and artisan applications — crafted with precision and planet-first principles.",
-    href: "/products",
+    href: "/coming-soon",
     gradient: "from-blue-500/20 to-indigo-500/10",
   },
   {
@@ -38,7 +38,7 @@ const products = [
     title: "Advanced Paper Products",
     description:
       "Next-gen paper engineered with nanocellulose technology for enhanced durability, printability, and industrial applications.",
-    href: "/products",
+    href: "/coming-soon",
     gradient: "from-lime-500/20 to-green-500/10",
   },
 ];
@@ -83,30 +83,7 @@ function ProductsOverview() {
           ))}
         </div>
 
-        {/* Enhanced CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <Link
-            href="/products"
-            id="products-see-all"
-            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-brand-dark-green text-white rounded-full font-bold text-lg overflow-hidden transition-all duration-300 shadow-xl shadow-brand-dark-green/20 hover:shadow-brand-dark-green/40 hover:-translate-y-1.5 active:scale-95"
-          >
-            {/* Glossy overlay effect on hover */}
-            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
 
-            <span className="relative z-10">See All Solutions</span>
-            <ArrowRight className="relative z-10 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </Link>
-
-          <p className="mt-6 text-sm font-medium text-slate-400 uppercase tracking-widest">
-            Explore our full catalog
-          </p>
-        </motion.div>
       </div>
     </section>
   );

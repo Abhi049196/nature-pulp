@@ -32,7 +32,7 @@ export default function ComingSoon() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
-                            href="/products"
+                            href="/products/pulp"
                             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-dark-green text-white rounded-full font-semibold hover:bg-brand-dark-green/90 transition-all duration-300 hover:shadow-xl hover:shadow-brand-dark-green/20 hover:-translate-y-0.5"
                         >
                             Explore Existing Products
