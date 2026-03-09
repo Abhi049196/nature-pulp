@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Leaf, Cpu, Users, ChevronDown, Recycle, Globe } from "lucide-react";
 
@@ -38,6 +39,17 @@ const floatingStats = [
 export default function Hero() {
     return (
         <section className="relative h-[100dvh] min-h-[600px] flex items-center overflow-hidden">
+
+            {/* Fallback Image (shown while video loads) */}
+            <div className="absolute inset-0 z-[-1]">
+                <Image
+                    src="/assets/factory.jpg"
+                    alt="Sustainable Pulp Factory"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+            </div>
 
             {/* Video Background (Vimeo iframe) */}
             <div className="absolute inset-0 z-0 pointer-events-none w-[110vw] h-[110vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

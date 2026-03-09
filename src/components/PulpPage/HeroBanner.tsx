@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf, Recycle, TreePine, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const highlights = [
   { icon: <Leaf className="w-4 h-4" />, text: "Agri-Waste Sourced" },
@@ -14,21 +15,27 @@ export default function HeroBanner() {
   return (
     <section className="relative h-[100dvh] min-h-[600px] flex items-center overflow-hidden">
 
+      {/* Fallback Image (shown while video loads) */}
+      <div className="absolute inset-0 z-[-1]">
+        <Image
+          src="/assets/factory.jpg"
+          alt="Sustainable Pulp Factory"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          poster="/assets/factory.jpg"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4"
-            type="video/mp4"
-          />
-        </video>
+      <div className="absolute inset-0 z-0 pointer-events-none w-[110vw] h-[110vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <iframe
+          src="https://player.vimeo.com/video/1171814387?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full object-cover scale-[1.05]"
+          title="Background Video"
+        />
       </div>
 
       {/* Multi-layer Overlays for depth */}
