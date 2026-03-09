@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ProductsPageClient from "./ProductsPageClient";
+import ProductsPageClient from "./_ProductsPageClient";
 
 export const metadata: Metadata = {
     title: "Products",
