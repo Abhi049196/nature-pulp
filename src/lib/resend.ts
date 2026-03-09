@@ -10,7 +10,7 @@ const COMPANY_LEGAL = "Jee Origin Pvt Ltd";
 const ADMIN_EMAIL = "support@jeeorigin.com";
 const PHONE = "+91 97989 73570";
 const WEBSITE = "https://www.jeeorigin.com";
-const LOGO_URL = "https://www.jeeorigin.com/logo.png";
+const LOGO_URL = "https://www.jeeorigin.com/footer-logo.png";
 
 // ═══════════════════════════════════════════════════════════════
 //  SHARED EMAIL LAYOUTf
@@ -307,7 +307,7 @@ export async function sendContactNotification(data: {
     try {
         // 1. Admin notification
         await resend.emails.send({
-            from: `${COMPANY_NAME} <notifications@jeeorigin.com>`,
+            from: `${COMPANY_NAME} <support@jeeorigin.com>`,
             to: ADMIN_EMAIL,
             subject: `New Website Submission – ${COMPANY_NAME}`,
             html: adminContactEmailHtml({ ...data, date: dateStr }),
@@ -315,7 +315,7 @@ export async function sendContactNotification(data: {
 
         // 2. User confirmation
         await resend.emails.send({
-            from: `${COMPANY_NAME} <notifications@jeeorigin.com>`,
+            from: `${COMPANY_NAME} <support@jeeorigin.com>`,
             to: data.email,
             subject: `Thank You for Contacting ${COMPANY_NAME}`,
             html: userContactConfirmationHtml({
@@ -347,7 +347,7 @@ export async function sendCareerNotification(data: {
     try {
         // 1. Admin notification
         await resend.emails.send({
-            from: `${COMPANY_NAME} <notifications@jeeorigin.com>`,
+            from: `${COMPANY_NAME} <support@jeeorigin.com>`,
             to: ADMIN_EMAIL,
             subject: `New Career Application – ${data.name} (${data.department})`,
             html: adminCareerEmailHtml({ ...data, date: dateStr }),
@@ -355,7 +355,7 @@ export async function sendCareerNotification(data: {
 
         // 2. User confirmation
         await resend.emails.send({
-            from: `${COMPANY_NAME} <notifications@jeeorigin.com>`,
+            from: `${COMPANY_NAME} <support@jeeorigin.com>`,
             to: data.email,
             subject: `Application Received – ${COMPANY_NAME}`,
             html: userCareerConfirmationHtml({
