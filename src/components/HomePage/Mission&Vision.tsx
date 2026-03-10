@@ -69,7 +69,7 @@ export default function MissionVision() {
             </h2>
 
             <p className="text-brand-dark-neutral/70 leading-relaxed mb-10 text-lg">
-              Jee Origin envisions a world where every pulp and paper product regenerates ecosystems, economies, and communities. By 2035, we aim to divert 10 million tons of agricultural waste from landfills, empower 100,000 farmers, and achieve net-zero emissions.
+              Jee Origin envisions a world where every pulp and paper product regenerates ecosystems, economies, and communities. By 2035, we aim to divert 10 million tons of agricultural waste from landfills, empower 10 million farmers, and achieve net-zero emissions.
             </p>
 
             <div className="grid grid-cols-2 gap-6">

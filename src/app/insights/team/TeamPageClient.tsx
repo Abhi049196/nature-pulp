@@ -8,7 +8,7 @@ const teamMembers = [
     {
         name: "Founding Member",
         designation: "CEO & Co-Founder",
-        bio: "Visionary leader with 15+ years in sustainable manufacturing and agri-waste innovation.",
+        bio: "Visionary leader with 10+ years in sustainable manufacturing and agri-waste innovation.",
     },
     {
         name: "Technical Lead",
@@ -32,7 +32,7 @@ const teamMembers = [
     },
     {
         name: "Marketing Head",
-        designation: "Head of Marketing",
+        designation: "Asst. Manager (Plant)",
         bio: "Brand storyteller connecting sustainability with global B2B market opportunities.",
     },
     {

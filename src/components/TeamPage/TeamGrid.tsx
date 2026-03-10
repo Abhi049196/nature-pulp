@@ -9,16 +9,16 @@ const teamMembers = [
   {
     name: "Gopal Jee",
     designation: "Co-Founder And CEO",
-    bio: "Visionary leader with 15+ years in sustainable manufacturing and agri-waste innovation.",
-    image: "/assets/team-image/gopal.png",
-    linkedin: "#",
+    bio: "Visionary leader with 10+ years in sustainable manufacturing and agri-waste innovation.",
+    image: "/assets/team-image/gopal.webp",
+    linkedin: "https://www.linkedin.com/in/gopaljeeyis",
     email: "mailto:ceo@company.com",
   },
   {
     name: "Ganesh Agrawal",
     designation: "Co-Founder and CMO",
     bio: "Supply chain specialist with deep experience in rural procurement and logistics.",
-    image: "/assets/team-image/ganesh-agrawal.png",
+    image: "/assets/team-image/ganesh-agrawal.webp",
     linkedin: "#",
     email: "mailto:coo@company.com",
   },
@@ -26,7 +26,7 @@ const teamMembers = [
     name: "Santosh Agrawal",
     designation: "Director",
     bio: "Expert in pulping technology, process engineering, and green manufacturing systems.",
-    image: "/assets/team-image/santosh-agrawall.png",
+    image: "/assets/team-image/santosh-agrawall.webp",
     linkedin: "#",
     email: "mailto:cto@company.com",
   },
@@ -34,24 +34,24 @@ const teamMembers = [
     name: "Nitish Kumar",
     designation: "COO (Plant)",
     bio: "Environmental scientist driving our zero-waste and net-zero carbon initiatives.",
-    image: "/assets/team-image/nitish.png",
-    linkedin: "#",
+    image: "/assets/team-image/nitish.webp",
+    linkedin: "https://www.linkedin.com/in/nitish-kumar-134443205",
     email: "mailto:sustainability@company.com",
   },
   {
     name: "Amrish Kumar",
     designation: "Operation Manager ( Plant)",
     bio: "Financial strategist focused on impact investing and sustainable business growth.",
-    image: "/assets/team-image/amrishh.png",
-    linkedin: "#",
+    image: "/assets/team-image/amrishh.webp",
+    linkedin: "https://www.linkedin.com/in/amrish-kumar-3b476918b",
     email: "mailto:cfo@company.com",
   },
   {
     name: "Kunal Jee",
-    designation: "Head of Marketing",
+    designation: "Asst. Manager (Plant)",
     bio: "Brand storyteller connecting sustainability with global B2B market opportunities.",
-    image: "/assets/team-image/kunal.png",
-    linkedin: "#",
+    image: "/assets/team-image/kunal.webp",
+    linkedin: "https://www.linkedin.com/in/kunal-jee-4411141b5",
     email: "mailto:marketing@company.com",
   },
 ];
@@ -111,13 +111,28 @@ function TeamGrid() {
 
                 {/* Info */}
                 <div className="p-5">
-                  <h3 className="font-heading text-lg font-bold text-brand-dark-green">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-brand-accent-brown font-medium mb-2">
-                    {member.designation}
-                  </p>
-                  <p className="text-xs text-brand-dark-neutral/50 leading-relaxed">
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <div>
+                      <h3 className="font-heading text-lg font-bold text-brand-dark-green">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-brand-accent-brown font-medium">
+                        {member.designation}
+                      </p>
+                    </div>
+                    {member.linkedin !== "#" && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${member.name} LinkedIn`}
+                        className="shrink-0 w-9 h-9 rounded-xl bg-brand-dark-green/8 hover:bg-brand-dark-green text-brand-dark-green hover:text-white flex items-center justify-center transition-all duration-300"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
+                  <p className="text-xs text-brand-dark-neutral/50 leading-relaxed mt-2">
                     {member.bio}
                   </p>
                 </div>

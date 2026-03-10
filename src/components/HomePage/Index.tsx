@@ -7,6 +7,7 @@ import SustainabilityCommitment from './SustainabilityCommitment'
 import Industries from './Industries'
 import TeamSection from './TeamSection'
 import FAQSection from './FAQSection'
+import DirectorMessage from './DirectorMessage'
 import CTA from '../CTA'
 
 function Index() {
@@ -19,6 +20,7 @@ function Index() {
       <SustainabilityCommitment />
       <Industries />
       <TeamSection />
+      <DirectorMessage />
       <FAQSection />
       <CTA />
     </div>

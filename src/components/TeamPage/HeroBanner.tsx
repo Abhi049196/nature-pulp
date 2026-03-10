@@ -8,7 +8,7 @@ const teamMembers = [
     {
         name: "Founding Member",
         designation: "CEO & Co-Founder",
-        bio: "Visionary leader with 15+ years in sustainable manufacturing and agri-waste innovation.",
+        bio: "Visionary leader with 10+ years in sustainable manufacturing and agri-waste innovation.",
     },
     {
         name: "Technical Lead",
@@ -32,7 +32,7 @@ const teamMembers = [
     },
     {
         name: "Marketing Head",
-        designation: "Head of Marketing",
+        designation: "Asst. Manager (Plant)",
         bio: "Brand storyteller connecting sustainability with global B2B market opportunities.",
     },
     {
@@ -48,9 +48,9 @@ const teamMembers = [
 ];
 
 function HeroBanner() {
-  return (
-    <div>
-         <section className="relative pt-32 pb-20 overflow-hidden">
+    return (
+        <div>
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0 warm-gradient" />
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
@@ -72,8 +72,8 @@ function HeroBanner() {
                     </motion.div>
                 </div>
             </section>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default HeroBanner

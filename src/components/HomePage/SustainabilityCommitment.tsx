@@ -40,7 +40,7 @@ const sustainabilityStats = [
   },
   {
     target: 10,
-    suffix: "M",
+    suffix: "M+",
     label: "Trees Saved",
     description: "Preventing deforestation through sustainable sourcing",
     icon: "🌳",
@@ -60,8 +60,8 @@ const sustainabilityStats = [
     icon: "📈",
   },
   {
-    target: 100000,
-    suffix: "+",
+    target: 10,
+    suffix: "M+",
     label: "Farmers Empowered",
     description: "Rural communities benefiting from our waste procurement",
     icon: "🌾",

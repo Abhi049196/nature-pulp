@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Linkedin } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import DecorativeLeaf from "@/components/DecorativeLeaf";
 
@@ -9,20 +10,23 @@ const teamMembers = [
     {
         name: "Gopal Jee",
         designation: "Co-Founder And CEO",
-        bio: "Visionary leader with 15+ years in sustainable manufacturing and agri-waste innovation.",
-        image: "/assets/team-image/gopal.png",
+        bio: "Visionary leader with 10+ years in sustainable manufacturing and agri-waste innovation.",
+        image: "/assets/team-image/gopal.webp",
+        linkedin: "https://www.linkedin.com/in/gopaljeeyis",
     },
     {
         name: "Ganesh Agrawal",
         designation: "Co-Founder and CMO",
         bio: "Supply chain specialist with deep experience in rural procurement and logistics.",
-        image: "/assets/team-image/ganesh-agrawal.png",
+        image: "/assets/team-image/ganesh-agrawal.webp",
+        linkedin: "",
     },
     {
         name: "Santosh Agrawal",
         designation: "Director",
         bio: "Expert in pulping technology, process engineering, and green manufacturing systems.",
-        image: "/assets/team-image/santosh-agrawall.png",
+        image: "/assets/team-image/santosh-agrawall.webp",
+        linkedin: "",
     },
 ];
 
@@ -63,13 +67,28 @@ export default function TeamSection() {
 
                                 {/* Info */}
                                 <div className="p-6 flex-grow flex flex-col justify-center">
-                                    <h3 className="font-heading text-xl font-bold text-brand-dark-green">
-                                        {member.name}
-                                    </h3>
-                                    <p className="text-sm text-brand-accent-brown font-semibold mb-3">
-                                        {member.designation}
-                                    </p>
-                                    <p className="text-xs text-brand-dark-neutral/60 leading-relaxed">
+                                    <div className="flex items-start justify-between gap-2 mb-1">
+                                        <div>
+                                            <h3 className="font-heading text-xl font-bold text-brand-dark-green">
+                                                {member.name}
+                                            </h3>
+                                            <p className="text-sm text-brand-accent-brown font-semibold">
+                                                {member.designation}
+                                            </p>
+                                        </div>
+                                        {member.linkedin && (
+                                            <a
+                                                href={member.linkedin}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={`${member.name} LinkedIn`}
+                                                className="shrink-0 w-9 h-9 rounded-xl bg-brand-dark-green/8 hover:bg-brand-dark-green text-brand-dark-green hover:text-white flex items-center justify-center transition-all duration-300"
+                                            >
+                                                <Linkedin className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                    </div>
+                                    <p className="text-xs text-brand-dark-neutral/60 leading-relaxed mt-2">
                                         {member.bio}
                                     </p>
                                 </div>

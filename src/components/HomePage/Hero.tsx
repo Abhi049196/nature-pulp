@@ -19,7 +19,7 @@ const floatingStats = [
     {
         icon: <Users className="w-5 h-5 text-amber-400" />,
         label: "Empowering",
-        value: "100K+ Farmers",
+        value: "10M+ Farmers",
         position: "bottom-28 left-0",
         delay: 0.8,
         animDuration: 5,
@@ -100,15 +100,15 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.1 }}
-                            className="font-heading text-[2.2rem] leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-white mb-4 sm:mb-7"
+                            className="font-heading text-[2.2rem] leading-[1.08] tracking-tight sm:text-5xl lg:text-[2.5rem] xl:text-55xl font-bold text-white mb-4 sm:mb-7"
                         >
-                            Jee Origin:{" "}
+                            JEE ORIGIN:{" "}
                             <span className="relative inline-block">
                                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brand-soft-green via-emerald-300 to-teal-300">
-                                    Paper That
+                                    Serve the Nature
                                 </span>
                             </span>{" "}
-                            Grows the Future
+                            — Save Tree, Save Planet.
                         </motion.h1>
 
                         {/* Description */}

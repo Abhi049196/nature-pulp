@@ -6,9 +6,12 @@ import {
   ArrowRight,
   UtensilsCrossed,
   ShoppingCart,
-  BookOpen,
-  Monitor,
   Factory,
+  Baby,
+  Package,
+  PenLine,
+  Layers,
+  Sparkles,
 } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import DecorativeLeaf from "@/components/DecorativeLeaf";
@@ -21,19 +24,34 @@ const industries = [
     desc: "Sustainable food-grade packaging",
   },
   {
+    icon: <Baby className="w-8 h-8" />,
+    name: "Diapering Industry",
+    desc: "Soft, absorbent fluff pulp for hygiene products",
+  },
+  {
+    icon: <Package className="w-8 h-8" />,
+    name: "Packaging Industry",
+    desc: "Eco-friendly packaging solutions at scale",
+  },
+  {
+    icon: <PenLine className="w-8 h-8" />,
+    name: "Writing & Printing",
+    desc: "Premium-grade paper for print & stationery",
+  },
+  {
+    icon: <Layers className="w-8 h-8" />,
+    name: "Moulding Industry",
+    desc: "Pulp moulded trays, cups & protective forms",
+  },
+  {
+    icon: <Sparkles className="w-8 h-8" />,
+    name: "Tissue Paper Industry",
+    desc: "Soft, high-absorbency tissue-grade pulp",
+  },
+  {
     icon: <ShoppingCart className="w-8 h-8" />,
     name: "E-commerce & Logistics",
     desc: "Eco-friendly shipping solutions",
-  },
-  {
-    icon: <BookOpen className="w-8 h-8" />,
-    name: "Publishing & Office",
-    desc: "Premium sustainable paper",
-  },
-  {
-    icon: <Monitor className="w-8 h-8" />,
-    name: "Electronics & Industrial",
-    desc: "Specialized protective packaging",
   },
   {
     icon: <Factory className="w-8 h-8" />,
@@ -57,12 +75,12 @@ function Industries() {
           <SectionHeading
             badge="Industries"
             title="Industries We Serve"
-            subtitle="From food packaging to paper manufacturing, our sustainable solutions power diverse industries across the globe."
+            subtitle="From hygiene products to paper manufacturing, our sustainable pulp solutions power diverse industries across the globe."
           />
         </div>
 
         {/* Improved Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {industries.map((industry, index) => (
             <motion.div
               key={industry.name}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Leaf, Cpu, Users, Zap } from "lucide-react";
+import { Leaf, Cpu, Users, Zap, FlaskConical, TreePine, Droplets, Sun, Recycle, CloudOff } from "lucide-react";
 import DecorativeLeaf from "@/components/DecorativeLeaf";
 
 const whyChooseUs = [
@@ -12,10 +12,40 @@ const whyChooseUs = [
       "Agro-waste, imported pulp, virgin pulp, recycled pulp, and ethical wood for zero-waste impact. Our multi-source strategy ensures unmatched supply resilience.",
   },
   {
-    icon: <Cpu className="w-6 h-6" />,
-    title: "Technological Leadership",
+    icon: <TreePine className="w-6 h-6" />,
+    title: "Tree-Free Pulp",
     description:
-      "AI, IoT, and nanocellulose technology drive smarter, greener production — optimizing every stage from fibre processing to final output.",
+      "100% sourced from agricultural waste like sugarcane bagasse and wheat straw — no trees are harmed in our manufacturing process.",
+  },
+  {
+    icon: <FlaskConical className="w-6 h-6" />,
+    title: "Chemical Free Pulp",
+    description:
+      "Our ozone bleaching technology eliminates the need for harmful chemicals, delivering bright, safe pulp without chlorine or toxic residues.",
+  },
+  {
+    icon: <Droplets className="w-6 h-6" />,
+    title: "ZLD Process",
+    description:
+      "Our Zero Liquid Discharge system recycles every drop of water used in production, ensuring no wastewater enters the environment.",
+  },
+  {
+    icon: <Sun className="w-6 h-6" />,
+    title: "Green Energy Solution",
+    description:
+      "Powered by renewable energy sources including biomass and solar, significantly reducing our dependency on fossil fuels.",
+  },
+  {
+    icon: <CloudOff className="w-6 h-6" />,
+    title: "Zero Carbon Emissions",
+    description:
+      "Our closed-loop manufacturing process and carbon offset initiatives ensure net-zero carbon emissions across our operations.",
+  },
+  {
+    icon: <Recycle className="w-6 h-6" />,
+    title: "Eco Friendly Solution",
+    description:
+      "Every product is 100% biodegradable and compostable, designed to return safely to nature at the end of its lifecycle.",
   },
   {
     icon: <Users className="w-6 h-6" />,
@@ -54,7 +84,7 @@ export default function WhyChoose() {
         </div>
 
         {/* Feature Grid */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
 
           {whyChooseUs.map((item, index) => (
             <motion.div
