@@ -47,6 +47,9 @@ export const metadata: Metadata = {
   creator: "Jee Origin",
   publisher: "Jee Origin Pvt Ltd",
   metadataBase: new URL("https://www.jeeorigin.com"),
+  alternates: {
+    canonical: "https://www.jeeorigin.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -57,10 +60,10 @@ export const metadata: Metadata = {
       "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/jeeorigin-og.png",
         width: 1200,
         height: 630,
-        alt: "Jee Origin - Sustainable Pulp & Eco-Friendly Paper Solutions",
+        alt: "JEE ORIGIN - Sustainable Pulp & Eco-Friendly Paper Solutions",
       },
     ],
   },
@@ -69,7 +72,7 @@ export const metadata: Metadata = {
     title: "Jee Origin | Sustainable Pulp & Eco-Friendly Paper Solutions",
     description:
       "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
-    images: ["/og-image.jpg"],
+    images: ["/jeeorigin-og.png"],
   },
   robots: {
     index: true,
