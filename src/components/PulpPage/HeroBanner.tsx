@@ -82,9 +82,9 @@ export default function HeroBanner() {
         </div>
       )}
 
-      {/* Multi-layer Overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A2619]/90 via-[#0A2619]/80 to-[#0A2619]/95 z-[2]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A2619]/80 via-[#0A2619]/40 to-[#0A2619]/50 z-[3]" />
+      {/* Multi-layer Overlays for depth - optimized to show video */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A2619]/50 via-[#0A2619]/30 to-[#0A2619]/60 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A2619]/60 via-transparent to-[#0A2619]/40 z-[3]" />
 
       {/* Decorative glows */}
       <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-brand-soft-green/10 rounded-full blur-[150px] z-[4]" />
