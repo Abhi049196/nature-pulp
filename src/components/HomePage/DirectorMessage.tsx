@@ -70,6 +70,8 @@ export default function DirectorMessage() {
                                         src="/assets/team-image/gopal.webp"
                                         alt="Mr. Gopal Jee"
                                         fill
+                                        sizes="80px"
+                                        quality={75}
                                         className="object-cover object-top"
                                     />
                                 </div>

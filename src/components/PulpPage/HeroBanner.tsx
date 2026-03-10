@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf, Recycle, TreePine, ChevronDown, Users, Globe } from "lucide-react";
 import Link from "next/link";
@@ -42,42 +43,52 @@ const floatingStats = [
 ];
 
 export default function HeroBanner() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowVideo(true), 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative h-[100dvh] min-h-[700px] flex items-center overflow-hidden">
 
-      {/* Fallback Image (shown while video loads) */}
-      <div className="absolute inset-0 z-[-1]">
+      {/* Hero Image (LCP element) */}
+      <div className="absolute inset-0 z-0">
         <Image
           src="/assets/hero.webp"
           alt="Sustainable Pulp Factory"
           fill
           priority
+          sizes="100vw"
+          quality={75}
           className="object-cover"
+          fetchPriority="high"
         />
       </div>
 
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0 pointer-events-none w-[110vw] h-[110vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <iframe
-          src="https://player.vimeo.com/video/1171814387?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full object-cover scale-[1.05]"
-          title="Background Video"
-        />
-      </div>
+      {/* Video Background (lazy loaded) */}
+      {showVideo && (
+        <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
+          <iframe
+            src="https://player.vimeo.com/video/1171814387?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[110vw] min-h-[110vh] w-auto h-auto"
+            title="Background Video"
+          />
+        </div>
+      )}
 
       {/* Multi-layer Overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A2619]/90 via-[#0A2619]/75 to-[#0A2619]/95 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A2619]/60 via-transparent to-[#0A2619]/40 z-[2]" />
-
-      {/* Animated grain texture overlay */}
-      <div className="absolute inset-0 z-[3] opacity-[0.04] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A2619]/90 via-[#0A2619]/80 to-[#0A2619]/95 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A2619]/80 via-[#0A2619]/40 to-[#0A2619]/50 z-[3]" />
 
       {/* Decorative glows */}
-      <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-brand-soft-green/10 rounded-full blur-[150px] z-[3]" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-brand-dark-green/15 rounded-full blur-[120px] z-[3]" />
+      <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-brand-soft-green/10 rounded-full blur-[150px] z-[4]" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-brand-dark-green/15 rounded-full blur-[120px] z-[4]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full pt-32 sm:pt-24 pb-20 sm:pb-12">
@@ -92,8 +103,8 @@ export default function HeroBanner() {
               transition={{ duration: 0.5 }}
               className="flex items-center gap-2 mb-6 sm:mb-8"
             >
-              <span className="text-sm text-white/40 font-medium">Products</span>
-              <span className="text-white/20">/</span>
+              <span className="text-sm text-white/60 font-medium">Products</span>
+              <span className="text-white/40">/</span>
               <span className="text-sm text-brand-soft-green font-semibold tracking-wide">
                 Pulp Collection
               </span>
@@ -138,7 +149,7 @@ export default function HeroBanner() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25 }}
-              className="text-[15px] sm:text-lg lg:text-xl text-white/60 leading-relaxed max-w-xl mb-8 sm:mb-10 font-light"
+              className="text-[15px] sm:text-lg lg:text-xl text-white/85 leading-relaxed max-w-xl mb-8 sm:mb-10 font-light"
             >
               Three categories of sustainable pulp, each engineered for specific
               industry needs. All derived from agricultural waste, all contributing
@@ -183,7 +194,7 @@ export default function HeroBanner() {
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm"
                 >
                   <span className="text-brand-soft-green">{item.icon}</span>
-                  <span className="text-xs font-medium text-white/50">{item.text}</span>
+                  <span className="text-xs font-medium text-white/70">{item.text}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -203,6 +214,8 @@ export default function HeroBanner() {
                   src="/assets/hero.webp"
                   alt="Nature Pulp Sustainable Product"
                   fill
+                  sizes="(min-width: 1024px) 400px, 0px"
+                  quality={60}
                   className="object-cover"
                   priority
                 />

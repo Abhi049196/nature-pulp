@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const teamMembers = [
   {
@@ -84,6 +84,8 @@ function TeamGrid() {
                     src={member.image}
                     alt={member.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={75}
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   />
 

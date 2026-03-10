@@ -75,40 +75,40 @@ export default function MissionVision() {
             <div className="grid grid-cols-2 gap-6">
 
               <div className="p-4 sm:p-6 rounded-2xl bg-[#f8faf9] border border-brand-soft-green/20">
-                <Leaf className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-dark-green" />
-                <h4 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
+                <Leaf className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-dark-green" aria-hidden="true" />
+                <h3 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
                   Sustainability
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-brand-dark-neutral/60">
                   Every product regenerates ecosystems
                 </p>
               </div>
 
               <div className="p-4 sm:p-6 rounded-2xl bg-[#f8faf9] border border-brand-soft-green/20">
-                <Zap className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-accent-brown" />
-                <h4 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-accent-brown" aria-hidden="true" />
+                <h3 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
                   Innovation
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-brand-dark-neutral/60">
                   AI & nanocellulose technology
                 </p>
               </div>
 
               <div className="p-4 sm:p-6 rounded-2xl bg-[#f8faf9] border border-brand-soft-green/20">
-                <Heart className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-dark-green" />
-                <h4 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
+                <Heart className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-dark-green" aria-hidden="true" />
+                <h3 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
                   Empowerment
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-brand-dark-neutral/60">
                   Uplifting farming communities
                 </p>
               </div>
 
               <div className="p-4 sm:p-6 rounded-2xl bg-[#f8faf9] border border-brand-soft-green/20">
-                <Globe className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-earth-brown" />
-                <h4 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
+                <Globe className="w-5 h-5 sm:w-6 sm:h-6 mb-3 text-brand-earth-brown" aria-hidden="true" />
+                <h3 className="font-semibold text-brand-dark-green mb-1 text-sm sm:text-base">
                   Climate Action
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-brand-dark-neutral/60">
                   Net-zero by 2035 — our pledge
                 </p>

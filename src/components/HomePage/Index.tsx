@@ -1,14 +1,35 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import Hero from './Hero'
-import WhyChoose from './WhyChoose'
-import MissionVision from './Mission&Vision'
-import ProductsOverview from './ProductsOverview'
-import SustainabilityCommitment from './SustainabilityCommitment'
-import Industries from './Industries'
-import TeamSection from './TeamSection'
-import FAQSection from './FAQSection'
-import DirectorMessage from './DirectorMessage'
-import CTA from '../CTA'
+
+// Dynamically import below-the-fold components to reduce initial JS bundle
+const WhyChoose = dynamic(() => import('./WhyChoose'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const MissionVision = dynamic(() => import('./Mission&Vision'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const ProductsOverview = dynamic(() => import('./ProductsOverview'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const SustainabilityCommitment = dynamic(() => import('./SustainabilityCommitment'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const Industries = dynamic(() => import('./Industries'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const TeamSection = dynamic(() => import('./TeamSection'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const DirectorMessage = dynamic(() => import('./DirectorMessage'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const FAQSection = dynamic(() => import('./FAQSection'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const CTA = dynamic(() => import('../CTA'), {
+  loading: () => <div className="min-h-[200px]" />,
+})
 
 function Index() {
   return (

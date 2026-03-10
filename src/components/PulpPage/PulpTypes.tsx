@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, ArrowRight, Leaf, Beaker, Award, BarChart3 } from "lucide-react";
+import { CheckCircle, Beaker, Award } from "lucide-react";
 import Image from "next/image";
 
 const pulpTypes = [
@@ -93,6 +93,8 @@ function PulpTypes() {
                                         src={pulp.image}
                                         alt={pulp.name}
                                         fill
+                                        sizes="(max-width: 1024px) 100vw, 50vw"
+                                        quality={75}
                                         className="object-cover"
                                     />
 

@@ -109,8 +109,11 @@ export default function Header() {
 
     // Close mobile menu on route change
     useEffect(() => {
-        setIsMobileMenuOpen(false);
-        setMobileForceOpen(null);
+        const id = requestAnimationFrame(() => {
+            setIsMobileMenuOpen(false);
+            setMobileForceOpen(null);
+        });
+        return () => cancelAnimationFrame(id);
     }, [pathname]);
 
     return (
@@ -128,12 +131,13 @@ export default function Header() {
                         }`}
                 >
                     {/* Logo */}
-                    <Link href="/" className="relative z-10 flex items-center gap-2 group shrink-0 h-[36px] sm:h-[46px]">
+                    <Link href="/" className="relative z-10 flex items-center gap-2 group shrink-0 h-[36px] sm:h-[46px]" aria-label="Jee Origin homepage">
                         <Image
                             src="/logo.png"
                             alt="Jee Origin Logo"
                             width={200}
                             height={100}
+                            sizes="(max-width: 640px) 150px, 200px"
                             className="object-contain w-auto h-full transition-transform duration-300 group-hover:scale-105"
                             priority
                         />
@@ -250,12 +254,13 @@ export default function Header() {
                         <div className="flex flex-col min-h-screen p-4 sm:p-6 pb-12">
                             {/* Top Header Pill */}
                             <div className="flex items-center justify-between bg-[#f8faf9] rounded-full px-6 py-3.5 sm:py-4 shadow-lg shrink-0">
-                                <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                                <Link href="/" onClick={() => setIsMobileMenuOpen(false)} aria-label="Jee Origin homepage">
                                     <Image
                                         src="/logo.png"
                                         alt="Jee Origin Logo"
                                         width={120}
                                         height={40}
+                                        sizes="120px"
                                         className="object-contain h-[32px] sm:h-[40px] w-auto"
                                     />
                                 </Link>

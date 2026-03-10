@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroBanner() {
@@ -9,10 +10,14 @@ export default function HeroBanner() {
 
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src="/assets/hero-banana.jpg"  // <-- apni image path daalna
-          alt="Pulp Collection"
-          className="w-full h-full object-cover"
+        <Image
+          src="/assets/hero.webp"
+          alt="About Jee Origin - Sustainable Pulp Manufacturing"
+          fill
+          priority
+          sizes="100vw"
+          quality={75}
+          className="object-cover"
         />
       </div>
 

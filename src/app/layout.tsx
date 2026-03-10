@@ -6,9 +6,10 @@ import Footer from "@/components/Footer";
 
 const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-barlow",
   display: "swap",
+  preload: true,
 });
 
 const glacial = {
@@ -95,6 +96,36 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${barlow.variable} ${glacial.variable}`}>
       <head>
+        {/* DNS Prefetch & Preconnect for third-party origins */}
+        <link rel="dns-prefetch" href="https://player.vimeo.com" />
+        <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Preload critical fonts */}
+        <link
+          rel="preload"
+          href="/fonts/GlacialIndifference-Regular.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/GlacialIndifference-Bold.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+
+        {/* Preload LCP hero image */}
+        <link
+          rel="preload"
+          href="/assets/hero.webp"
+          as="image"
+          type="image/webp"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

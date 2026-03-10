@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 import { Leaf } from "lucide-react";
 
 interface DecorativeLeafProps {
@@ -20,32 +18,16 @@ export default function DecorativeLeaf({
     opacity = 0.1,
 }: DecorativeLeafProps) {
     return (
-        <motion.div
+        <div
             className={`absolute pointer-events-none z-0 text-brand-dark-green ${className}`}
-            initial={{ y: 0, rotate: rotation, opacity: 0 }}
-            animate={{
-                y: [0, -20, 0],
-                rotate: [rotation, rotation + 15, rotation],
+            style={{
+                opacity,
+                transform: `rotate(${rotation}deg)`,
+                animation: `decorativeFloat ${duration}s ease-in-out ${delay}s infinite`,
             }}
-            whileInView={{ opacity }}
-            viewport={{ once: true }}
-            transition={{
-                y: {
-                    duration: duration,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: delay,
-                },
-                rotate: {
-                    duration: duration * 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: delay,
-                },
-                opacity: { duration: 1 },
-            }}
+            aria-hidden="true"
         >
             <Leaf className="w-full h-full" strokeWidth={1.5} />
-        </motion.div>
+        </div>
     );
 }

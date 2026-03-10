@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Mail, Phone, Linkedin, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
+import { Mail, Phone, Linkedin, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 
 const footerLinks = {
     company: [
@@ -34,12 +34,13 @@ export default function Footer() {
                 {/* Top Section */}
                 <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
                     <div className="space-y-6">
-                        <Link href="/" className="block">
+                        <Link href="/" className="block" aria-label="Go to Jee Origin homepage">
                             <Image
                                 src="/footer-logo.png"
                                 alt="Jee Origin Logo"
                                 width={100}
                                 height={40}
+                                sizes="100px"
                                 className="brightness-0 invert opacity-80"
                             />
                         </Link>
@@ -49,7 +50,7 @@ export default function Footer() {
                     </div>
 
                     <div className="space-y-4">
-                        <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-bold">Direct Inquiry</p>
+                        <p className="text-[10px] uppercase tracking-[0.2em] text-white/60 font-bold">Direct Inquiry</p>
                         <a href="mailto:support@jeeorigin.com" className="text-xl font-medium hover:text-brand-soft-green transition-colors block">
                             support@jeeorigin.com
                         </a>
@@ -58,45 +59,50 @@ export default function Footer() {
                                 href="https://www.linkedin.com/company/nature-pulp/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Follow Jee Origin on LinkedIn"
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
                             >
-                                <Linkedin className="w-4 h-4" />
+                                <Linkedin className="w-4 h-4" aria-hidden="true" />
                             </a>
 
                             <a
                                 href="https://www.instagram.com/jeeorigin?igsh=MWs4OWhyOHd1czloNg%3D%3D&utm_source=qr"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Follow Jee Origin on Instagram"
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
                             >
-                                <Instagram className="w-4 h-4" />
+                                <Instagram className="w-4 h-4" aria-hidden="true" />
                             </a>
 
                             <a
                                 href="https://www.facebook.com/share/18BUifjPXL/?mibextid=wwXIfr"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Follow Jee Origin on Facebook"
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
                             >
-                                <Facebook className="w-4 h-4" />
+                                <Facebook className="w-4 h-4" aria-hidden="true" />
                             </a>
 
                             <a
                                 href="https://x.com/JeeOrigin"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Follow Jee Origin on X (Twitter)"
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
                             >
-                                <Twitter className="w-4 h-4" />
+                                <Twitter className="w-4 h-4" aria-hidden="true" />
                             </a>
 
                             <a
                                 href="https://youtube.com/@jeeorigin?si=Hff9hzqBdbh_Gpoa"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Subscribe to Jee Origin on YouTube"
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-brand-soft-green transition-all duration-300"
                             >
-                                <Youtube className="w-4 h-4" />
+                                <Youtube className="w-4 h-4" aria-hidden="true" />
                             </a>
                         </div>
                     </div>
@@ -105,7 +111,7 @@ export default function Footer() {
                 {/* Main Navigation Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-white/10">
                     <div>
-                        <h4 className="text-[11px] uppercase tracking-[0.2em] text-brand-soft-green font-semibold mb-6">Company</h4>
+                        <h3 className="text-[11px] uppercase tracking-[0.2em] text-brand-soft-green font-semibold mb-6">Company</h3>
                         <ul className="space-y-3">
                             {footerLinks.company.map((link) => (
                                 <li key={link.name}>
@@ -118,7 +124,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-[11px] uppercase tracking-[0.2em] text-brand-soft-green font-semibold mb-6">Insights</h4>
+                        <h3 className="text-[11px] uppercase tracking-[0.2em] text-brand-soft-green font-semibold mb-6">Insights</h3>
                         <ul className="space-y-3">
                             {footerLinks.resources.map((link) => (
                                 <li key={link.name}>
@@ -131,18 +137,18 @@ export default function Footer() {
                     </div>
 
                     <div className="col-span-2">
-                        <h4 className="text-[11px] uppercase tracking-[0.2em] text-brand-soft-green font-semibold mb-6">Contact</h4>
+                        <h3 className="text-[11px] uppercase tracking-[0.2em] text-brand-soft-green font-semibold mb-6">Contact</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             <div className="space-y-4">
                                 <div>
-                                    <p className="text-[10px] uppercase tracking-wider text-white/40 mb-1">Registered Address</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-white/50 mb-1">Registered Address</p>
                                     <p className="text-xs text-white/70 leading-relaxed">
                                         H. No. 1198, Sector 16,<br />
                                         Near Z Park, Haryana – 121002, India
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="text-[10px] uppercase tracking-wider text-white/40 mb-1">Factory Address</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-white/50 mb-1">Factory Address</p>
                                     <p className="text-xs text-white/70 leading-relaxed">
                                         Dharam Nagar, Gali No. 1,<br />
                                         Near Opposite Jain Mandir,<br />
@@ -151,16 +157,16 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="space-y-4">
-                                <p className="text-[10px] uppercase tracking-wider text-white/40 mb-1">Get In Touch</p>
+                                <p className="text-[10px] uppercase tracking-wider text-white/50 mb-1">Get In Touch</p>
                                 <div className="space-y-2">
-                                    <p className="text-xs text-white/60 flex items-center gap-2">
-                                        <Phone className="w-3.5 h-3.5 text-brand-soft-green/60" /> +91 97989 73570
-                                    </p>
-                                    <p className="text-xs text-white/60 flex items-center gap-2">
-                                        <Mail className="w-3.5 h-3.5 text-brand-soft-green/60" /> support@jeeorigin.com
-                                    </p>
+                                    <a href="tel:+919798973570" className="text-xs text-white/70 flex items-center gap-2 hover:text-white transition-colors">
+                                        <Phone className="w-3.5 h-3.5 text-brand-soft-green/70" aria-hidden="true" /> +91 97989 73570
+                                    </a>
+                                    <a href="mailto:support@jeeorigin.com" className="text-xs text-white/70 flex items-center gap-2 hover:text-white transition-colors">
+                                        <Mail className="w-3.5 h-3.5 text-brand-soft-green/70" aria-hidden="true" /> support@jeeorigin.com
+                                    </a>
                                 </div>
-                                <p className="text-xs text-white/40 italic">Available Worldwide</p>
+                                <p className="text-xs text-white/50 italic">Available Worldwide</p>
                             </div>
                         </div>
                     </div>
@@ -168,9 +174,9 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="mt-10 flex flex-col lg:flex-row justify-between items-center gap-6">
-                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[10px] text-white/20 uppercase tracking-widest font-bold">
+                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[10px] text-white/50 uppercase tracking-widest font-bold">
                         <span>© 2026 Jee Origin Pvt Ltd</span>
-                        <span className="w-1 h-1 bg-white/10 rounded-full hidden sm:block" />
+                        <span className="w-1 h-1 bg-white/20 rounded-full hidden sm:block" aria-hidden="true" />
                         <span className="w-full sm:w-auto text-center sm:text-left mt-2 sm:mt-0">
                             Created by{" "}
                             <a
@@ -186,7 +192,7 @@ export default function Footer() {
 
                     <div className="flex gap-8">
                         {footerLinks.legal.map((link) => (
-                            <Link key={link.name} href={link.href} className="text-[10px] text-white/20 hover:text-white transition-colors uppercase tracking-widest font-bold">
+                            <Link key={link.name} href={link.href} className="text-[10px] text-white/50 hover:text-white transition-colors uppercase tracking-widest font-bold">
                                 {link.name}
                             </Link>
                         ))}

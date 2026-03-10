@@ -90,7 +90,7 @@ function SustainabilityCommitment() {
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-soft-green/20 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-brand-dark-green/30 rounded-full blur-[120px]" />
         {/* Subtle Grid Overlay */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255,255,255,0.05) 49px, rgba(255,255,255,0.05) 50px), repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(255,255,255,0.05) 49px, rgba(255,255,255,0.05) 50px)' }} />
 
         {/* Floating Leaves */}
         <DecorativeLeaf className="w-32 h-32 top-10 right-[15%] text-brand-soft-green" rotation={45} delay={0.5} duration={12} opacity={0.15} />
@@ -153,7 +153,7 @@ function SustainabilityCommitment() {
             </h3>
             <div className="w-24 h-1 bg-brand-soft-green mx-auto rounded-full mb-4" />
             <p className="max-w-2xl mx-auto text-white/50 text-base italic">
-              "Measurable goals. Tangible impact."
+              &ldquo;Measurable goals. Tangible impact.&rdquo;
             </p>
           </motion.div>
 
