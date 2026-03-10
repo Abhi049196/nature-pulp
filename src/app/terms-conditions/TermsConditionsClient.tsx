@@ -207,7 +207,7 @@ export default function TermsConditionsClient() {
                         </div>
 
                         {/* Content */}
-                        <div className="lg:col-span-3">
+                        <div className="lg:col-span-3 ">
                             <div className="space-y-12">
                                 {sections.map((section) => (
                                     <motion.div

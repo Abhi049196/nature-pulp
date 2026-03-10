@@ -71,7 +71,7 @@ export default function HeroBanner() {
       {showVideo && (
         <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
           <iframe
-            src="https://player.vimeo.com/video/1171814387?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+            src="https://player.vimeo.com/video/1172223151?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
