@@ -80,9 +80,9 @@ export default function Hero() {
                 </div>
             )}
 
-            {/* Multi-layer overlays for depth & readability - optimized to show video */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A2619]/50 via-[#0A2619]/30 to-[#0A2619]/60 z-[2]" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A2619]/60 via-transparent to-[#0A2619]/40 z-[3]" />
+            {/* Multi-layer overlays for depth & readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A2619]/90 via-[#0A2619]/80 to-[#0A2619]/95 z-[2]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A2619]/85 via-[#0A2619]/85 50% via-transparent 75% to-transparent z-[3]" />
 
             {/* Decorative ambient glows */}
             <div className="absolute top-[-15%] left-[-8%] w-[50%] h-[50%] bg-brand-soft-green/8 rounded-full blur-[150px] z-[4]" />
