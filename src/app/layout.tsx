@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Barlow } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -162,6 +163,19 @@ export default function RootLayout({
             }),
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YPC5MR008P"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-YPC5MR008P');
+          `}
+        </Script>
       </head>
       <body className="font-body antialiased">
         <Header />
