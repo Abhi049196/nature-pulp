@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/mongodb";
 import { sendContactNotification } from "@/lib/resend";
 
+// Ensure this route runs on the Node.js runtime (not Edge) so process.env and MongoDB driver work
+export const runtime = "nodejs";
+
 // ─── Simple in-memory rate limiter ───
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT = 5; // max submissions
