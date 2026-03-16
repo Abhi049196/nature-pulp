@@ -147,17 +147,33 @@ export default function FormComponent({
                 body,
             });
 
-            const result = await res.json();
+            // Try JSON first; fall back to text if server returns HTML/error page
+            const contentType = res.headers.get("content-type") || "";
+            const isJson = contentType.includes("application/json");
+            const result = isJson ? await res.json() : await res.text();
+
+            const hasErrors = (value: unknown): value is { errors: Record<string, string> } => {
+                return typeof value === "object" && value !== null && "errors" in value;
+            };
+
+            const hasErrorMessage = (value: unknown): value is { error?: string } => {
+                return typeof value === "object" && value !== null && "error" in value;
+            };
 
             if (!res.ok) {
                 // Handle server-side validation errors
-                if (result.errors) {
+                if (isJson && hasErrors(result)) {
                     setFieldErrors(result.errors);
                     setStatus("error");
                     setErrorMessage("Please fix the errors below.");
                     return;
                 }
-                throw new Error(result.error || "Submission failed");
+                const message = isJson
+                    ? (hasErrorMessage(result) && result.error) || "Submission failed"
+                    : typeof result === "string"
+                        ? result.slice(0, 300)
+                        : "Submission failed";
+                throw new Error(message);
             }
 
             setStatus("success");
