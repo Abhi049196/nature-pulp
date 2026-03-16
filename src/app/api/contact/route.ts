@@ -115,8 +115,12 @@ export async function POST(request: Request) {
         );
     } catch (error) {
         console.error("❌ Contact form error:", error);
+        const message = error instanceof Error ? error.message : "Unknown error";
         return NextResponse.json(
-            { error: "Failed to process submission. Please try again." },
+            {
+                error: "Failed to process submission. Please try again.",
+                detail: message,
+            },
             { status: 500 }
         );
     }
