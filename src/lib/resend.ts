@@ -10,7 +10,7 @@ const COMPANY_LEGAL = "Jee Origin Pvt Ltd";
 const ADMIN_EMAIL = "support@jeeorigin.com";
 const PHONE = "+91 97989 73570";
 const WEBSITE = "https://www.jeeorigin.com";
-const LOGO_URL = "/footer-logo.png";
+const LOGO_URL = "https://www.jeeorigin.com/footer-logo.png";
 
 // ═══════════════════════════════════════════════════════════════
 //  SHARED EMAIL LAYOUTf
