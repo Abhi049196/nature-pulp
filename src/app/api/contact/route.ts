@@ -2,9 +2,6 @@ import { NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/mongodb";
 import { sendContactNotification } from "@/lib/resend";
 
-// Ensure this route runs on the Node.js runtime (not Edge) so process.env and MongoDB driver work
-export const runtime = "nodejs";
-
 // ─── Simple in-memory rate limiter ───
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT = 5; // max submissions
@@ -57,15 +54,15 @@ export async function POST(request: Request) {
             );
         }
 
-        const body = await request.json();
+        const formData = await request.formData();
 
         const data = {
-            name: sanitize(String(body?.name || "")),
-            address: sanitize(String(body?.address || "")),
-            email: String(body?.email || "").trim().toLowerCase(),
-            phone: sanitize(String(body?.phone || "")),
-            subject: sanitize(String(body?.subject || "")),
-            message: sanitize(String(body?.message || "")),
+            name: sanitize((formData.get("name") as string) || ""),
+            address: sanitize((formData.get("address") as string) || ""),
+            email: ((formData.get("email") as string) || "").trim().toLowerCase(),
+            phone: sanitize((formData.get("phone") as string) || ""),
+            subject: sanitize((formData.get("subject") as string) || ""),
+            message: sanitize((formData.get("message") as string) || ""),
         };
 
         // ─── Validate required fields ───
@@ -118,12 +115,8 @@ export async function POST(request: Request) {
         );
     } catch (error) {
         console.error("❌ Contact form error:", error);
-        const message = error instanceof Error ? error.message : "Unknown error";
         return NextResponse.json(
-            {
-                error: "Failed to process submission. Please try again.",
-                detail: message,
-            },
+            { error: "Failed to process submission. Please try again." },
             { status: 500 }
         );
     }

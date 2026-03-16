@@ -4,9 +4,6 @@ import { sendCareerNotification } from "@/lib/resend";
 import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 
-// Ensure Node.js runtime so MongoDB driver and env vars work
-export const runtime = "nodejs";
-
 // ─── Simple in-memory rate limiter ───
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT = 5;

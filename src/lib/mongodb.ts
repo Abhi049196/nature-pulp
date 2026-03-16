@@ -1,16 +1,10 @@
 import { MongoClient, Db } from "mongodb";
 
-function getMongoUri(): string {
-    const uri = (process.env.MONGODB_URI || "").trim();
-    if (!uri) {
-        throw new Error(
-            "MONGODB_URI is not defined. Set it in your host environment (e.g., Hostinger env vars) and redeploy."
-        );
-    }
-    return uri;
-}
+const MONGODB_URI = process.env.MONGODB_URI || "";
 
-const DB_NAME = process.env.MONGODB_DB?.trim() || "jeeorigin";
+if (!MONGODB_URI) {
+    console.warn("⚠️ MONGODB_URI is not set in environment variables");
+}
 
 let cachedClient: MongoClient | null = null;
 let cachedDb: Db | null = null;
@@ -20,12 +14,14 @@ export async function connectToDatabase(): Promise<{ client: MongoClient; db: Db
         return { client: cachedClient, db: cachedDb };
     }
 
-    const uri = getMongoUri();
+    if (!MONGODB_URI) {
+        throw new Error("MONGODB_URI is not defined. Please add it to your .env.local file.");
+    }
 
-    const client = new MongoClient(uri);
+    const client = new MongoClient(MONGODB_URI);
     await client.connect();
 
-    const db = client.db(DB_NAME);
+    const db = client.db("jeeorigin");
 
     cachedClient = client;
     cachedDb = db;
