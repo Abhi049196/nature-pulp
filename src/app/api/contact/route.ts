@@ -57,15 +57,15 @@ export async function POST(request: Request) {
             );
         }
 
-        const formData = await request.formData();
+        const body = await request.json();
 
         const data = {
-            name: sanitize((formData.get("name") as string) || ""),
-            address: sanitize((formData.get("address") as string) || ""),
-            email: ((formData.get("email") as string) || "").trim().toLowerCase(),
-            phone: sanitize((formData.get("phone") as string) || ""),
-            subject: sanitize((formData.get("subject") as string) || ""),
-            message: sanitize((formData.get("message") as string) || ""),
+            name: sanitize(String(body?.name || "")),
+            address: sanitize(String(body?.address || "")),
+            email: String(body?.email || "").trim().toLowerCase(),
+            phone: sanitize(String(body?.phone || "")),
+            subject: sanitize(String(body?.subject || "")),
+            message: sanitize(String(body?.message || "")),
         };
 
         // ─── Validate required fields ───
