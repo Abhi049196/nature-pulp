@@ -96,9 +96,11 @@ export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [hoveredNav, setHoveredNav] = useState<string | null>(null);
     const [mobileForceOpen, setMobileForceOpen] = useState<string | null>(null);
+    const [mounted, setMounted] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
+        setMounted(true);
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
         };
@@ -116,6 +118,8 @@ export default function Header() {
         });
         return () => cancelAnimationFrame(id);
     }, [pathname]);
+
+    if (!mounted) return null;
 
     return (
         <header
