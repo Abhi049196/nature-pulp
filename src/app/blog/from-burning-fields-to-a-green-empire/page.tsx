@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "JEE Origin",
     images: [
       {
-        url: "/assets/blog/hero-burning-fields.png",
+        url: "/assets/blog/hero-burning-fields-og.png",
         width: 1200,
         height: 630,
         alt: "From burning fields to a green empire — JEE Origin sustainable pulp story",
