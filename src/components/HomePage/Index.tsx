@@ -27,6 +27,9 @@ const DirectorMessage = dynamic(() => import('./DirectorMessage'), {
 const FAQSection = dynamic(() => import('./FAQSection'), {
   loading: () => <div className="min-h-[400px]" />,
 })
+const BlogSection = dynamic(() => import('./BlogSection'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
 const CTA = dynamic(() => import('../CTA'), {
   loading: () => <div className="min-h-[200px]" />,
 })
@@ -42,6 +45,7 @@ function Index() {
       <Industries />
       <TeamSection />
       <DirectorMessage />
+      <BlogSection />
       <FAQSection />
       <CTA />
     </div>
