@@ -2,10 +2,9 @@ import BlogPostClient from "./BlogPostClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "From the Burning Fields to a Green Empire: My Journey to Save Rural India | JEE Origin",
+  title: "From Burning Fields to a Green Empire | JEE Origin",
   description:
-    "Discover how Gopal Jee, a farmer's son, turned agricultural waste into sustainable paper pulp, building JEE Origin — India's circular economy pioneer saving forests and empowering farmers.",
+    "Discover how Gopal Jee turned agricultural waste into sustainable pulp at JEE Origin—India's circular economy pioneer saving forests and empowering farmers.",
   keywords: [
     "agricultural waste to paper pulp",
     "stubble burning alternatives India",
@@ -23,10 +22,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Gopal Jee", url: "https://www.jeeorigin.com" }],
   openGraph: {
     type: "article",
-    title:
-      "From the Burning Fields to a Green Empire: My Journey to Save Rural India",
+    title: "From Burning Fields to a Green Empire",
     description:
-      "How a farmer's son built JEE Origin to turn crop residue into sustainable pulp — empowering farmers, saving forests, and creating a smoke-free India.",
+      "A farmer's son turns crop residue into sustainable pulp at JEE Origin—saving forests, empowering farmers, and creating a smoke-free India.",
     url: "https://www.jeeorigin.com/blog/from-burning-fields-to-a-green-empire",
     siteName: "JEE Origin",
     images: [
@@ -51,8 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "From the Burning Fields to a Green Empire | JEE Origin",
+    title: "From Burning Fields to a Green Empire | JEE Origin",
     description:
       "A farmer's son turns crop residue into sustainable pulp — saving forests and empowering rural India.",
     images: ["/assets/blog/hero-burning-fields.png"],
@@ -67,10 +64,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline:
-    "From the Burning Fields to a Green Empire: My Journey to Save Rural India",
+  headline: "From Burning Fields to a Green Empire",
   description:
-    "Discover how Gopal Jee, a farmer's son, turned agricultural waste into sustainable paper pulp, building JEE Origin — India's circular economy pioneer.",
+    "Discover how Gopal Jee turned agricultural waste into sustainable pulp at JEE Origin—India's circular economy pioneer saving forests and empowering farmers.",
   image: "https://www.jeeorigin.com/assets/blog/hero-burning-fields.png",
   author: {
     "@type": "Person",
