@@ -112,7 +112,7 @@ export default function BlogPostClient() {
         {/* Article Body */}
         <article className="min-w-0 flex-1 max-w-3xl">
           {/* Intro */}
-          <motion.div {...fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12">
             <p className="text-lg md:text-xl leading-relaxed text-brand-dark-neutral/90 first-letter:text-5xl first-letter:font-heading first-letter:font-bold first-letter:text-brand-dark-green first-letter:float-left first-letter:mr-3 first-letter:mt-1">
               In many parts of rural India, the end of every harvest still looks like the end of the world — fields on fire, skies turned grey, and the smell of smoke choking entire villages. For most people, this is just &ldquo;how things are done&rdquo; to clear crop residue. For me, as a farmer&apos;s son, every burning field feels like a wound to the soil that raised me.
             </p>
