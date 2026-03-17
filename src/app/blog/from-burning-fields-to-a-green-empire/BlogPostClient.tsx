@@ -5,6 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, Calendar, User, Leaf, Factory, Sprout, TreePine, Wind, ArrowRight, Quote, ChevronUp } from "lucide-react";
 import { useState, useEffect } from "react";
+import { blogPosts } from "@/lib/blog-data";
+import BlogCard from "@/components/BlogCard";
+
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 
@@ -271,6 +274,31 @@ export default function BlogPostClient() {
           </div>
         </article>
       </div>
+
+      {/* ===== MORE STORIES SECTION ===== */}
+      <section className="bg-white py-24 border-t border-brand-soft-green/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-dark-green/60 mb-3">Continue Reading</p>
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-brand-dark-green">More <span className="text-brand-accent-brown">Stories</span></h2>
+            </div>
+            <Link href="/blog" className="group inline-flex items-center gap-2 text-brand-dark-green font-bold text-sm tracking-wide hover:text-brand-accent-brown transition-colors">
+              View All Posts <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {blogPosts
+              .filter(post => post.slug !== "from-burning-fields-to-a-green-empire")
+              .slice(0, 3)
+              .map((post, index) => (
+                <BlogCard key={post.slug} post={post} index={index} />
+              ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Back to Top */}
       {showBackToTop && (
