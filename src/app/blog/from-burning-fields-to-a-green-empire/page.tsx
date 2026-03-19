@@ -20,18 +20,18 @@ export const metadata: Metadata = {
     "bio-refinery India",
     "zero-waste manufacturing India",
   ],
-  authors: [{ name: "Gopal Jee", url: "https://www.jeeorigin.com" }],
+  authors: [{ name: "Gopal Jee", url: "https://jeeorigin.com" }],
   openGraph: {
     type: "article",
     title:
       "From the Burning Fields to a Green Empire: My Journey to Save Rural India",
     description:
       "How a farmer's son built JEE Origin to turn crop residue into sustainable pulp — empowering farmers, saving forests, and creating a smoke-free India.",
-    url: "https://www.jeeorigin.com/blog/from-burning-fields-to-a-green-empire",
+    url: "https://jeeorigin.com/blog/from-burning-fields-to-a-green-empire",
     siteName: "JEE Origin",
     images: [
       {
-        url: "/assets/blog/hero-burning-fields.png",
+        url: "/assets/blog/hero-burning-fields-og.png",
         width: 1200,
         height: 630,
         alt: "From burning fields to a green empire — JEE Origin sustainable pulp story",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://www.jeeorigin.com/blog/from-burning-fields-to-a-green-empire",
+      "https://jeeorigin.com/blog/from-burning-fields-to-a-green-empire",
   },
 };
 
@@ -71,7 +71,7 @@ const jsonLd = {
     "From the Burning Fields to a Green Empire: My Journey to Save Rural India",
   description:
     "Discover how Gopal Jee, a farmer's son, turned agricultural waste into sustainable paper pulp, building JEE Origin — India's circular economy pioneer.",
-  image: "https://www.jeeorigin.com/assets/blog/hero-burning-fields.png",
+  image: "https://jeeorigin.com/assets/blog/hero-burning-fields.png",
   author: {
     "@type": "Person",
     name: "Gopal Jee",
@@ -86,7 +86,7 @@ const jsonLd = {
     name: "JEE Origin Pvt Ltd",
     logo: {
       "@type": "ImageObject",
-      url: "https://www.jeeorigin.com/logo.png",
+      url: "https://jeeorigin.com/logo.png",
     },
   },
   datePublished: "2025-01-15",
@@ -94,7 +94,7 @@ const jsonLd = {
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id":
-      "https://www.jeeorigin.com/blog/from-burning-fields-to-a-green-empire",
+      "https://jeeorigin.com/blog/from-burning-fields-to-a-green-empire",
   },
   wordCount: 2800,
   keywords:

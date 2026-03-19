@@ -121,7 +121,7 @@ export default function Hero() {
                                     Serve the Nature
                                 </span>
                             </span>{" "}
-                            — Save Tree, Save Planet.
+                            Save Tree, Save Planet.
                         </motion.h1>
 
                         {/* Description */}

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 // Types and Data (Vahi hain jo aapne diye the)
 type ImageItem = { id: number; image: string; type: string };
-const filters = ["All", "Machine", "People"];
+const filters = ["All", "Machine", "Inauguration Event"];
 
 const machineImages: ImageItem[] = [
   { id: 1, image: "/assets/GalleryImage/machines1.webp", type: "machine" },
