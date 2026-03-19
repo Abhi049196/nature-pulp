@@ -11,17 +11,6 @@ const nextConfig: NextConfig = {
         has: [
           {
             type: "host",
-            value: "jeeorigin.com",
-          },
-        ],
-        permanent: true,
-        destination: "https://jeeorigin.com/:path*",
-      },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
             value: "www.jeeorigin.com",
           },
         ],
