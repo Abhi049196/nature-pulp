@@ -4,6 +4,33 @@ const nextConfig: NextConfig = {
   // Enable compression
   compress: true,
 
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "jeeorigin.com",
+          },
+        ],
+        permanent: true,
+        destination: "https://jeeorigin.com/:path*",
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.jeeorigin.com",
+          },
+        ],
+        permanent: true,
+        destination: "https://jeeorigin.com/:path*",
+      },
+    ];
+  },
+
   // Image optimization
   images: {
     formats: ["image/avif", "image/webp"],

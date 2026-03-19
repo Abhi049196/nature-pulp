@@ -19,8 +19,8 @@ const glacial = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Jee Origin | Sustainable Pulp & Eco-Friendly Paper Solutions",
-    template: "%s | Jee Origin",
+    default: "JEEORIGIN PVT LTD",
+    template: "%s | JEEORIGIN PVT LTD",
   },
   description:
     "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
@@ -48,16 +48,16 @@ export const metadata: Metadata = {
   authors: [{ name: "Jee Origin Pvt Ltd" }],
   creator: "Jee Origin",
   publisher: "Jee Origin Pvt Ltd",
-  metadataBase: new URL("https://www.jeeorigin.com"),
+  metadataBase: new URL("https://jeeorigin.com"),
   alternates: {
-    canonical: "https://www.jeeorigin.com",
+    canonical: "https://jeeorigin.com",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.jeeorigin.com",
+    url: "https://jeeorigin.com",
     siteName: "Jee Origin",
-    title: "Jee Origin",
+    title: "JEEORIGIN PVT LTD",
     description:
       "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
     images: [
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jee Origin | Sustainable Pulp & Eco-Friendly Paper Solutions",
+    title: "JEEORIGIN PVT LTD",
     description:
       "Jee Origin transforms agricultural waste into premium pulp, compostable packaging, and sustainable paper products for global industries.",
     images: ["/jeeorigin-og.png"],
@@ -97,6 +97,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${barlow.variable} ${glacial.variable}`}>
       <head>
+        <title>JEEORIGIN PVT LTD</title>
+        <meta name="title" content="JEEORIGIN PVT LTD" />
+        <meta property="og:title" content="JEEORIGIN PVT LTD" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jeeorigin.com" />
+        <link rel="canonical" href="https://jeeorigin.com" />
+
         {/* DNS Prefetch & Preconnect for third-party origins */}
         <link rel="dns-prefetch" href="https://player.vimeo.com" />
         <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />
